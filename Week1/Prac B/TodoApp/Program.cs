@@ -1,6 +1,4 @@
-﻿using System.Collections.Immutable;
-
-class Program
+﻿class Program
 {
     static void Main(string[] args)
     {
@@ -48,15 +46,37 @@ class Program
 
                     switch(parts.Length)
                     {
-                        case < 0:
+                        case < 2:
                             Console.WriteLine("Please enter a task number.");
                             break;
                         
                         default:
+                            int index = int.Parse(parts[1]);
+                            switch(index)
+                            {
+                                case < 1:
 
+                                    Console.WriteLine("Invalid index.");
+
+                                    break;
+
+
+                                default:
+
+                                    if(index <= tasks.Count)
+                                    {
+                                        tasks.RemoveAt(index - 1);
+                                        Console.WriteLine("Task removed.");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Invalid index.");
+                                    }
+
+                                    break;
+                            }
                             break;
                     }
-
                     break;
             }
         }
