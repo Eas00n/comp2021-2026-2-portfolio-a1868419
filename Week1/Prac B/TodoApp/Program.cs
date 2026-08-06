@@ -3,6 +3,9 @@
     static void Main(string[] args)
     {
         List<string> tasks = new List<string>();
+
+        Dictionary<string, List<int>> tags = new Dictionary<string, List<int>>();
+
         while(true)
         {
             Console.Write("Enter command:");
@@ -79,6 +82,10 @@
                     }
                     break;
                 
+                case "tag":
+
+                    break;
+
                 case "clear":
 
                     tasks.Clear();
