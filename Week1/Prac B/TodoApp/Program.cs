@@ -34,7 +34,10 @@
                             Console.WriteLine("No tasks.");
                             break;
                         default:
-
+                            for(int i = 0; i < tasks.Count; i++)
+                            {
+                                Console.WriteLine($"{i + 1}. {tasks[i]}");
+                            }
                             break;
                     }
                     break;
