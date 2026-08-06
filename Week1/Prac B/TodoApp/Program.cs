@@ -78,6 +78,20 @@
                             break;
                     }
                     break;
+                
+                case "clear":
+
+                    tasks.Clear();
+
+                    Console.WriteLine("All tasks cleared.");
+
+                    break;
+
+                default:
+
+                    Console.WriteLine("Invalid command.");
+
+                    break;
             }
         }
     }
