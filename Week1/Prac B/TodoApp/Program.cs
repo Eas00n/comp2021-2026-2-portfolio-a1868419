@@ -9,6 +9,23 @@
             string input = Console.ReadLine();
 
             string[] parts = input.Split(' ');
+            switch(parts[0])
+            {
+                case "add":
+
+                    switch(parts.Length)
+                    {
+                        case < 2:
+                            Console.WriteLine("Please enter a task.");
+                            break;
+
+                        default:
+                            tasks.Add(parts[1]);
+                            Console.WriteLine("Task added.");
+                            break;
+                    }
+                    break;
+            }
         }
     }
 }
