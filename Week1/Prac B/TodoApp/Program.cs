@@ -25,6 +25,19 @@
                             break;
                     }
                     break;
+
+                case "show":
+
+                    switch(tasks.Count)
+                    {
+                        case 0:
+                            Console.WriteLine("No tasks.");
+                            break;
+                        default:
+
+                            break;
+                    }
+                    break;
             }
         }
     }
