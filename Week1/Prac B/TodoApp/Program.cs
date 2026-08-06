@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Collections.Immutable;
+
+class Program
 {
     static void Main(string[] args)
     {
@@ -40,6 +42,21 @@
                             }
                             break;
                     }
+                    break;
+
+                case "remove":
+
+                    switch(parts.Length)
+                    {
+                        case < 0:
+                            Console.WriteLine("Please enter a task number.");
+                            break;
+                        
+                        default:
+
+                            break;
+                    }
+
                     break;
             }
         }
