@@ -84,6 +84,48 @@
                 
                 case "tag":
 
+                    switch (parts.Length)
+                    {
+                        case < 3:
+                            Console.WriteLine("Usage: tag [index] [name]");
+                            break;
+
+                        default:
+
+                            try
+                            {
+                                int index = int.Parse(parts[1]);
+                                string tagName = parts[2];
+
+                                if (index < 1 || index > tasks.Count)
+                                {
+                                    Console.WriteLine("Invalid index.");
+                                    break;
+                                }
+
+                                if (!tags.ContainsKey(tagName))
+                                {
+                                    tags.Add(tagName, new List<int>());
+                                }
+
+                                if (tags[tagName].Contains(index))
+                                {
+                                    Console.WriteLine("Duplicate tag.");
+                                    break;
+                                }
+
+                                tags[tagName].Add(index);
+
+                                Console.WriteLine("Tag added.");
+                            }
+                            catch (FormatException)
+                            {
+                                Console.WriteLine("Please enter a valid number.");
+                            }
+
+                            break;
+                    }
+                    
                     break;
 
                 case "clear":
