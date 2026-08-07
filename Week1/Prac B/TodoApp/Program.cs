@@ -125,7 +125,20 @@
 
                             break;
                     }
-                    
+
+                    break;
+
+                case "get-tagged":
+                    switch(parts.Length)
+                    {
+                        case < 2:
+
+                            Console.WriteLine("Usage: get-tagged [tag]");
+
+                            break;
+
+                        default:
+                    }
                     break;
 
                 case "clear":
