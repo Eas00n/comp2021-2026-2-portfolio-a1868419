@@ -138,6 +138,24 @@
                             break;
 
                         default:
+
+                            string tagName = parts[1];
+
+                            if(tags.ContainsKey(tagName))
+                            {
+                                for(int i = 0; i < tags[tagName].Count; i++)
+                                {
+                                    int index = tags[tagName][i];
+
+                                    Console.WriteLine($"{index}. {tasks[index - 1]}");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Tag not found.");
+                            }
+
+                            break;
                     }
                     break;
 
