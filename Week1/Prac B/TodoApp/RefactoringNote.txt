@@ -1,0 +1,9 @@
+Design Choice Improvement:
+
+I improved the readability of my code by using clear variable names and organising commands with switch statements.
+
+For example, I used meaningful names such as "tasks", "input", "parts", and "tagName" to make the purpose of each variable easier to understand.
+
+I also used switch cases to separate different commands such as add, show, remove, tag, and get-tagged. This makes the program easier to follow and maintain compared with using many conditional statements.
+
+This design choice improves code readability and makes future changes easier.
