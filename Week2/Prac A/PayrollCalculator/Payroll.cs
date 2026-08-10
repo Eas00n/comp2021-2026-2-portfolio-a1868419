@@ -10,5 +10,9 @@ public class Payroll
         {
             throw new ArgumentException("Hours cannot be negative.");
         }
+        if (rate < 0)
+        {
+            throw new ArgumentException("Rate cannot be negative.");
+        }
     }
 }
