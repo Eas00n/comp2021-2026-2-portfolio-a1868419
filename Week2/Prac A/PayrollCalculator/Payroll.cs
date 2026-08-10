@@ -14,5 +14,12 @@ public class Payroll
         {
             throw new ArgumentException("Rate cannot be negative.");
         }
+        if (taxRate < 0 || taxRate > 1)
+        {
+            throw new ArgumentException("Tax rate must be between 0 and 1.");
+        }
+        this.hours = hours;
+        this.rate = rate;
+        this.taxRate = taxRate;
     }
 }
