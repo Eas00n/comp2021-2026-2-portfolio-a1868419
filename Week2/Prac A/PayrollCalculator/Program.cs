@@ -1,7 +1,5 @@
 ﻿class Program
 {
-    const double TAX_RATE = 0.2;
-
     static void Main(string[] args)
     {
         Console.Write("Enter employee name: ");
@@ -21,22 +19,19 @@
         {
             throw new InvalidOperationException("No input provided for hourly rate.");
         }
-        double rate = double.Parse(rateInput);
+        decimal rate = decimal.Parse(rateInput);
 
-        double net_pay = CalculatePay(hours, rate);
+        Console.Write("Tax rate (e.g., 0.2 for 20%): ");
+        string taxRateInput = Console.ReadLine();
+        if (taxRateInput == null)
+        {
+            throw new InvalidOperationException("No input provided for tax rate.");
+        }
+        decimal taxRate = decimal.Parse(taxRateInput);
+
+        Payroll payroll = new Payroll(hours, rate, taxRate);
+        decimal net_pay = payroll.CalculateNetPay();
 
         Console.WriteLine($"{name} earned ${net_pay:F2} after tax.");
-    }
-
-    static double CalculatePay(double hours, double rate)
-    {
-        if (hours < 0 || rate < 0)
-        {
-            throw new ArgumentException("Hours and rate must be positive.");
-        }
-        double gross = hours * rate;
-        double tax = gross * TAX_RATE;
-        double net = gross - tax;
-        return net;
     }
 }
