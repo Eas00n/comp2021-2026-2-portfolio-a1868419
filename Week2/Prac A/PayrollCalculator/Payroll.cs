@@ -6,6 +6,9 @@ public class Payroll
 
     public Payroll(double hours, decimal rate, decimal taxRate)
     {
-        
+        if (hours < 0)
+        {
+            throw new ArgumentException("Hours cannot be negative.");
+        }
     }
 }
