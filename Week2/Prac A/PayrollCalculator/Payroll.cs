@@ -1,6 +1,17 @@
 public class Payroll
 {
-    private double hours;
+    private double hours
+    {
+        get;
+        set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException("Hours cannot be negative.");
+            }
+            hours = value;
+        }
+    }
     private decimal rate;
     private decimal taxRate;
 
