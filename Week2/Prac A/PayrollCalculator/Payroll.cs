@@ -22,4 +22,9 @@ public class Payroll
         this.rate = rate;
         this.taxRate = taxRate;
     }
+
+    public decimal CalculateNetPay()
+    {
+        
+    }
 }
