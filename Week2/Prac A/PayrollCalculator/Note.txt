@@ -1,22 +1,7 @@
-Differences Between Python and C#
+## Reflection
 
-1. Variables must be declared with a type in C#, while Python creates variables automatically.
-Example:
-Python: hours = 38
-C#: double hours = 38;
+When I changed my program from procedural code to a class, the code became more organised. Before, most of the code was inside `Main()`. Now, the `Payroll` class contains the payroll data and methods such as `CalculateNetPay()` and `ChangeTaxRate()`.
 
-2. User input parsing is explicit in C#. Console.ReadLine() always returns a string, 
-so numeric input must be converted using double.Parse(). 
-In Python, float(input()) performs both input and conversion in one step.
+I also learned how private fields, properties, constructors, and methods work together. The class can validate the data and makes the code easier to test.
 
-3. C# separates displaying output and reading input. 
-Python uses input("Prompt") to show a message and read input in one statement, 
-while C# uses Console.Write() (or Console.WriteLine()) and Console.ReadLine() as two separate steps.
-
-4. C# uses compile-time type checking. 
-Many mistakes, such as using an undeclared variable or missing a semicolon, 
-are detected before the program runs. Python usually reports these errors at runtime.
-
-5. C# uses exception handling with try-catch. 
-Invalid numeric input can throw a FormatException, 
-while invalid arguments can throw an ArgumentException.
+C# static typing means I need to specify data types such as `double` and `decimal`. At first, this was a little difficult, but it helped me find errors during compilation. I also learned that using the correct data type is important in C#.
