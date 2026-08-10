@@ -30,8 +30,19 @@
         decimal taxRate = decimal.Parse(taxRateInput);
 
         Payroll payroll = new Payroll(hours, rate, taxRate);
-        decimal net_pay = payroll.CalculateNetPay();
+        decimal netPay = payroll.CalculateNetPay();
 
-        Console.WriteLine($"{name} earned ${net_pay:F2} after tax.");
+        Console.WriteLine($"{name} earned ${netPay:F2} after tax.");
+
+        Console.Write("Enter a new tax rate: ");
+        string newTaxRateInput = Console.ReadLine();
+        if (newTaxRateInput == null)
+        {
+            throw new InvalidOperationException("No input provided for new tax rate.");
+        }
+        decimal newTaxRate = decimal.Parse(newTaxRateInput);
+        payroll.ChangeTaxRate(newTaxRate);
+        netPay = payroll.CalculateNetPay();
+        Console.WriteLine($"{name} earned ${netPay:F2} after tax with the new tax rate.");
     }
 }
