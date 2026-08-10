@@ -27,5 +27,12 @@ public class Payroll
     {
         decimal grossPay = (decimal)hours * rate;
         decimal tax = grossPay * taxRate;
+        decimal netPay = grossPay - tax;
+        return netPay;
+    }
+
+    public void ChangeTaxRate(decimal newTaxRate)
+    {
+        
     }
 }
