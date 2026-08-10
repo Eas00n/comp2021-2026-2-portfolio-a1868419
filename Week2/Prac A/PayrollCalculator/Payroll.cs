@@ -26,5 +26,6 @@ public class Payroll
     public decimal CalculateNetPay()
     {
         decimal grossPay = (decimal)hours * rate;
+        decimal tax = grossPay * taxRate;
     }
 }
