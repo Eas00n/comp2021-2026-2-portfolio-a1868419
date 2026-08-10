@@ -1,56 +1,47 @@
 public class Payroll
 {
-    private double hours
+    private double _hours;
+    private decimal _rate;
+    private decimal _taxRate;
+    private double Hours
     {
-        get;
+        get { return _hours;}
         set
         {
             if (value < 0)
             {
                 throw new ArgumentException("Hours cannot be negative.");
             }
-            hours = value;
+            _hours = value;
         }
     }
-    private decimal rate
+    private decimal Rate
     {
-        get;
+        get { return _rate;}
         set
         {
             if (value < 0)
             {
                 throw new ArgumentException("Rate cannot be negative.");
             }
-            rate = value;
+            _rate = value;
         }
     }
-    private decimal taxRate
+    private decimal TaxRate
     {
-        get;
+        get { return _taxRate;}
         set
         {
             if (value < 0 || value > 1)
             {
                 throw new ArgumentException("Tax rate must be between 0 and 1.");
             }
-            taxRate = value;
+            _taxRate = value;
         }
     }
 
     public Payroll(double hours, decimal rate, decimal taxRate)
     {
-        if (hours < 0)
-        {
-            throw new ArgumentException("Hours cannot be negative.");
-        }
-        if (rate < 0)
-        {
-            throw new ArgumentException("Rate cannot be negative.");
-        }
-        if (taxRate < 0 || taxRate > 1)
-        {
-            throw new ArgumentException("Tax rate must be between 0 and 1.");
-        }
         Hours = hours;
         Rate = rate;
         TaxRate = taxRate;
