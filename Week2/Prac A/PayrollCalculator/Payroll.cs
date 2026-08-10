@@ -33,6 +33,10 @@ public class Payroll
 
     public void ChangeTaxRate(decimal newTaxRate)
     {
-        
+        if (newTaxRate < 0 || newTaxRate > 1)
+        {
+            throw new ArgumentException("Tax rate must be between 0 and 1.");
+        }
+        taxRate = newTaxRate;
     }
 }
