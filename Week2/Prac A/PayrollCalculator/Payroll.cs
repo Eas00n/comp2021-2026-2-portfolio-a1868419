@@ -51,25 +51,21 @@ public class Payroll
         {
             throw new ArgumentException("Tax rate must be between 0 and 1.");
         }
-        this.hours = hours;
-        this.rate = rate;
-        this.taxRate = taxRate;
+        Hours = hours;
+        Rate = rate;
+        TaxRate = taxRate;
     }
 
     public decimal CalculateNetPay()
     {
-        decimal grossPay = (decimal)hours * rate;
-        decimal tax = grossPay * taxRate;
+        decimal grossPay = (decimal)Hours * Rate;
+        decimal tax = grossPay * TaxRate;
         decimal netPay = grossPay - tax;
         return netPay;
     }
 
     public void ChangeTaxRate(decimal newTaxRate)
     {
-        if (newTaxRate < 0 || newTaxRate > 1)
-        {
-            throw new ArgumentException("Tax rate must be between 0 and 1.");
-        }
-        taxRate = newTaxRate;
+        TaxRate = newTaxRate;
     }
 }
