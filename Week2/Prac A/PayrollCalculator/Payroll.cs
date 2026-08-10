@@ -24,7 +24,18 @@ public class Payroll
             rate = value;
         }
     }
-    private decimal taxRate;
+    private decimal taxRate
+    {
+        get;
+        set
+        {
+            if (value < 0 || value > 1)
+            {
+                throw new ArgumentException("Tax rate must be between 0 and 1.");
+            }
+            taxRate = value;
+        }
+    }
 
     public Payroll(double hours, decimal rate, decimal taxRate)
     {
