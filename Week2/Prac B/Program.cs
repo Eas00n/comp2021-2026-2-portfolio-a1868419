@@ -15,5 +15,14 @@
 
         account.Withdraw(200m);
         Console.WriteLine($"After withdrawal: ${account.Balance:F2}");
+
+        try
+        {
+            account.Withdraw(4000m);
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
     }
 }
