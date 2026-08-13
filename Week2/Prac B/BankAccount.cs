@@ -6,6 +6,7 @@ public class BankAccount
     {
         Balance += amount;
     }
+    
     public void Withdraw(decimal amount)
     {
             if (amount > Balance)
@@ -13,5 +14,15 @@ public class BankAccount
                 throw new ArgumentException("You do not have enough money in your account to withdraw this amount.");
             }
         Balance -= amount;
+    }
+
+    public void Deposit(int amount)
+    {
+        Balance += amount;
+    }
+
+    public void Deposit(double amount)
+    {
+        Balance += (decimal)amount;
     }
 }
