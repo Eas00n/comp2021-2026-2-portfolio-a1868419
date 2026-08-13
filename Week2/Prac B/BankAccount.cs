@@ -8,6 +8,10 @@ public class BankAccount
     }
     public void Withdraw(decimal amount)
     {
+            if (amount > Balance)
+            {
+                throw new ArgumentException("Insufficient balance.");
+            }
         Balance -= amount;
     }
 }
