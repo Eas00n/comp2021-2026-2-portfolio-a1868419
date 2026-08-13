@@ -16,6 +16,12 @@
         account.Withdraw(200m);
         Console.WriteLine($"After withdrawal: ${account.Balance:F2}");
 
+        account.Deposit(50);
+        Console.WriteLine($"After int deposit: ${account.Balance:F2}");
+
+        account.Deposit(25.5);
+        Console.WriteLine($"After double deposit: ${account.Balance:F2}");
+
         try
         {
             account.Withdraw(4000m);
@@ -24,11 +30,5 @@
         {
             Console.WriteLine($"Error: {ex.Message}");
         }
-
-        account.Deposit(50);
-        Console.WriteLine($"After int deposit: ${account.Balance:F2}");
-
-        account.Deposit(25.5);
-        Console.WriteLine($"After double deposit: ${account.Balance:F2}");
     }
 }
