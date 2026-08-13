@@ -8,4 +8,15 @@
     <Project Path="Week1/Prac B/TodoApp.Tests/TodoApp.Tests.csproj" />
     <Project Path="Week1/Prac B/TodoApp/TodoApp.csproj" />
   </Folder>
+  <Folder Name="/Week2/" />
+  <Folder Name="/Week2/Prac A/">
+    <Project Path="Week2/Prac A/PayrollCalculator.Tests/PayrollCalculator.Tests.csproj" />
+    <Project Path="Week2/Prac A/PayrollCalculator/PayrollCalculator.csproj" />
+  </Folder>
+  <Folder Name="/Week2/Prac B/">
+    <Project Path="Week2/Prac B/BankAccount.Tests/BankAccount.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Week2/Prac B/BankAccount/">
+    <Project Path="Week2/Prac B/BankAccount/Prac B.csproj" />
+  </Folder>
 </Solution>
