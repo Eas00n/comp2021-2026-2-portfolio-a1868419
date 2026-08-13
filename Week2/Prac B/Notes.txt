@@ -1,0 +1,5 @@
+Encapsulation keeps the data inside the class and controls how we change it. It makes the code safer.
+
+Access modifiers like public and private control who can use the class data and methods. They help protect the data.
+
+Method overloading means we can use the same method name with different types of parameters. For example, I used Deposit with decimal, int, and double. Python does not work the same way because the last method would replace the previous one.
