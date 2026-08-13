@@ -10,7 +10,7 @@ public class BankAccount
     {
             if (amount > Balance)
             {
-                throw new ArgumentException("Insufficient balance.");
+                throw new ArgumentException("You do not have enough money in your account to withdraw this amount.");
             }
         Balance -= amount;
     }
