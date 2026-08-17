@@ -11,4 +11,14 @@ public class UnitTest1
 
         Assert.Equal(1500m, account.Balance);
     }
+
+    [Fact]
+    public void Withdraw_DecreasesBalance()
+    {
+        var account = new BankAccount("Yuchen", 1000m);
+
+        account.Withdraw(200m);
+
+        Assert.Equal(800m, account.Balance);
+    }
 }
