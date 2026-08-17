@@ -1,4 +1,21 @@
 public class CheckingAccount : BankAccount
 {
-    
+    public decimal TransactionFee { get; set; }
+    public CheckingAccount(string owner, decimal balance, decimal transactionFee)
+        : base(owner, balance)
+    {
+        TransactionFee = transactionFee;
+    }
+    public override void Withdraw(decimal amount)
+    {
+        decimal total = amount + TransactionFee;
+
+        if (total > Balance)
+        {
+            throw new ArgumentException("You do not have enough money!");
+        }
+
+        Balance -= total;
+    }
+
 }
