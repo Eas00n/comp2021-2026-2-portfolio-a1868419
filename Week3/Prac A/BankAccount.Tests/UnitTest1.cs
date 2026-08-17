@@ -29,4 +29,15 @@ public class UnitTest1
 
         Assert.Throws<ArgumentException>(() => account.Withdraw(1500m));
     }
+    
+    [Fact]
+    public void SavingsAccount_ApplyInterest_IncreasesBalance()
+    {
+        var account = new SavingsAccount("Yuchen", 1000m, 5.0);
+
+        account.ApplyInterest();
+
+        Assert.Equal(1050m, account.Balance);
+    }
+
 }
