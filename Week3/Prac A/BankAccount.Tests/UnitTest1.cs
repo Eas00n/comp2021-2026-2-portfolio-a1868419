@@ -32,6 +32,16 @@ public class BankAccountTests
     }
 
     [Fact]
+    public void BankAccount_DisplayAccountInfo_Works()
+    {
+        var account = new BankAccountClass("Yuchen", 1500m);
+
+        account.DisplayAccountInfo();
+
+        Assert.Equal(1500m, account.Balance);
+    }
+
+    [Fact]
     public void SavingsAccount_ApplyInterest_IncreasesBalance()
     {
         var account = new SavingsAccount("Yuchen", 1000m, 5.0m);
@@ -62,6 +72,14 @@ public class BankAccountTests
     }
 
     [Fact]
+    public void CheckingAccount_Withdraw_ThrowsException_WhenBalanceIsNotEnough()
+    {
+        var account = new CheckingAccount("Yuchen", 1000m, 10m);
+
+        Assert.Throws<ArgumentException>(() => account.Withdraw(1000m));
+    }
+
+    [Fact]
     public void CheckingAccount_DisplayAccountInfo_Works()
     {
         var account = new CheckingAccount("Yuchen", 1500m, 10m);
@@ -69,13 +87,5 @@ public class BankAccountTests
         account.DisplayAccountInfo();
 
         Assert.Equal(1500m, account.Balance);
-    }
-
-    [Fact]
-    public void CheckingAccount_Withdraw_ThrowsException_WhenBalanceIsNotEnough()
-    {
-        var account = new CheckingAccount("Yuchen", 1000m, 10m);
-
-        Assert.Throws<ArgumentException>(() => account.Withdraw(1000m));
     }
 }

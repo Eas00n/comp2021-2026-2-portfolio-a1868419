@@ -290,8 +290,8 @@ var assemblies = [
   {
     "name": "BankAccount",
     "classes": [
-      { "name": "BankAccount", "rp": "BankAccount_BankAccount.html", "cl": 16, "ucl": 5, "cal": 21, "tl": 33, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "CheckingAccount", "rp": "BankAccount_CheckingAccount.html", "cl": 16, "ucl": 2, "cal": 18, "tl": 28, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BankAccount", "rp": "BankAccount_BankAccount.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 33, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "CheckingAccount", "rp": "BankAccount_CheckingAccount.html", "cl": 18, "ucl": 0, "cal": 18, "tl": 28, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Program", "rp": "BankAccount_Program.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "SavingsAccount", "rp": "BankAccount_SavingsAccount.html", "cl": 14, "ucl": 0, "cal": 14, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
