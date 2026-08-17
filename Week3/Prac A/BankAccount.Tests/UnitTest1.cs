@@ -40,4 +40,13 @@ public class UnitTest1
         Assert.Equal(1050m, account.Balance);
     }
 
+     [Fact]
+    public void SavingsAccount_DisplayAccountInfo_Works()
+    {
+        var account = new SavingsAccount("Yuchen", 1500m, 3.5);
+
+        account.DisplayAccountInfo();
+
+        Assert.Equal(1500m, account.Balance);
+    }
 }
