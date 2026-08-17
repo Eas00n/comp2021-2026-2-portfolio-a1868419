@@ -11,4 +11,11 @@ public class SavingsAccount : BankAccount
     {
         Balance += Balance * InterestRate;
     }
+    public override void DisplayAccountInfo()
+    {
+        Console.WriteLine($"Account: SavingsAccount");
+        Console.WriteLine($"Owner: {Owner}");
+        Console.WriteLine($"Balance: ${Balance:F2}");
+        Console.WriteLine($"Interest rate: {InterestRate * 100:F1}%");
+    }
 }
