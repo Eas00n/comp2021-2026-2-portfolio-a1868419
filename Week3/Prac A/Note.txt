@@ -1,0 +1,7 @@
+## Reflection
+
+When I changed my program from one BankAccount class to a base class with derived classes, the code became more organised. The `BankAccount` class contains the common properties and methods, such as `Owner`, `Balance`, `Deposit()` and `Withdraw()`. This means I do not need to repeat the same code in `SavingsAccount` and `CheckingAccount`.
+
+I also learned how inheritance and method overriding work in C#. `SavingsAccount` has its own responsibility for managing the interest rate and applying interest. `CheckingAccount` manages the transaction fee and deducts it when money is withdrawn. Both classes can reuse the common code from `BankAccount`.
+
+I also learned how the `base` keyword is used to call the parent class constructor and how `virtual` and `override` allow derived classes to provide their own behaviour. This helped me understand how inheritance can make code easier to maintain and extend.
