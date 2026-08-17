@@ -1,0 +1,26 @@
+public class BankAccount
+{
+    public string Owner { get; set; }
+    public decimal Balance { get; set; }
+
+    public BankAccount(string owner, decimal balance)
+    {
+        Owner = owner;
+        Balance = balance;
+    }
+
+    public void Deposit(decimal amount)
+    {
+        Balance += amount;
+    }
+
+    public virtual void Withdraw(decimal amount)
+    {
+        if (amount > Balance)
+        {
+            throw new ArgumentException("You do not have enough money in your account.");
+        }
+
+        Balance -= amount;
+    }
+}
