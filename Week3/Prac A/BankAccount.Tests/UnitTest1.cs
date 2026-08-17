@@ -59,4 +59,14 @@ public class UnitTest1
 
         Assert.Equal(890m, account.Balance);
     }
+
+    [Fact]
+    public void CheckingAccount_DisplayAccountInfo_Works()
+    {
+        var account = new CheckingAccount("Yuchen", 1500m, 10m);
+
+        account.DisplayAccountInfo();
+
+        Assert.Equal(1500m, account.Balance);
+    }
 }
