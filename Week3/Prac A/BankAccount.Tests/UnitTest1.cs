@@ -3,8 +3,12 @@
 public class UnitTest1
 {
     [Fact]
-    public void Test1()
+    public void Deposit_IncreasesBalance()
     {
+        var account = new BankAccount("Yuchen", 1000m);
 
+        account.Deposit(500m);
+
+        Assert.Equal(1500m, account.Balance);
     }
 }
