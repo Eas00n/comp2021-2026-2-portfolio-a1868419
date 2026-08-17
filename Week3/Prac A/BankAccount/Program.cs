@@ -1,8 +1,8 @@
-﻿SavingsAccount savings = new SavingsAccount("Yuchen", 1000m, 0.05m);
-savings.ApplyInterest();
+﻿SavingsAccount savings = new SavingsAccount("Yuchen", 1500m, 0.035m);
+CheckingAccount checking = new CheckingAccount("Yuchen", 1500m, 10m);
 
-CheckingAccount checking = new CheckingAccount("Yuchen", 1000m, 10m);
-checking.Withdraw(100m);
+savings.DisplayAccountInfo();
 
-Console.WriteLine($"Savings Account: {savings.Owner}, Balance: ${savings.Balance:F2}");
-Console.WriteLine($"Checking Account: {checking.Owner}, Balance: ${checking.Balance:F2}");
+Console.WriteLine();
+
+checking.DisplayAccountInfo();
