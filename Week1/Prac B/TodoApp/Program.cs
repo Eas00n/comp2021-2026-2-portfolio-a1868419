@@ -9,9 +9,9 @@
         while(true)
         {
             Console.Write("Enter command:");
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
 
-            string[] parts = input.Split(' ');
+            string[] parts = input!.Split(' ');
             switch(parts[0])
             {
                 case "add":
