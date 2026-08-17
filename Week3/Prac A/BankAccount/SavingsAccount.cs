@@ -9,7 +9,7 @@ public class SavingsAccount : BankAccount
 
     public void ApplyInterest()
     {
-        Balance += Balance * InterestRate;
+        Balance += Balance * InterestRate / 100;
     }
     public override void DisplayAccountInfo()
     {

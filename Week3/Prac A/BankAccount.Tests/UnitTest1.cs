@@ -1,11 +1,12 @@
-﻿namespace BankAccount.Tests;
+﻿using Xunit;
+using BankAccountClass = global::BankAccount;
 
-public class UnitTest1
+public class BankAccountTests
 {
     [Fact]
     public void Deposit_IncreasesBalance()
     {
-        var account = new BankAccount("Yuchen", 1000m);
+        var account = new BankAccountClass("Yuchen", 1000m);
 
         account.Deposit(500m);
 
@@ -15,7 +16,7 @@ public class UnitTest1
     [Fact]
     public void Withdraw_DecreasesBalance()
     {
-        var account = new BankAccount("Yuchen", 1000m);
+        var account = new BankAccountClass("Yuchen", 1000m);
 
         account.Withdraw(200m);
 
@@ -25,25 +26,25 @@ public class UnitTest1
     [Fact]
     public void Withdraw_ThrowsException_WhenBalanceIsNotEnough()
     {
-        var account = new BankAccount("Yuchen", 1000m);
+        var account = new BankAccountClass("Yuchen", 1000m);
 
         Assert.Throws<ArgumentException>(() => account.Withdraw(1500m));
     }
-    
+
     [Fact]
     public void SavingsAccount_ApplyInterest_IncreasesBalance()
     {
-        var account = new SavingsAccount("Yuchen", 1000m, 5.0);
+        var account = new SavingsAccount("Yuchen", 1000m, 5.0m);
 
         account.ApplyInterest();
 
         Assert.Equal(1050m, account.Balance);
     }
 
-     [Fact]
+    [Fact]
     public void SavingsAccount_DisplayAccountInfo_Works()
     {
-        var account = new SavingsAccount("Yuchen", 1500m, 3.5);
+        var account = new SavingsAccount("Yuchen", 1500m, 3.5m);
 
         account.DisplayAccountInfo();
 
@@ -68,5 +69,13 @@ public class UnitTest1
         account.DisplayAccountInfo();
 
         Assert.Equal(1500m, account.Balance);
+    }
+
+    [Fact]
+    public void CheckingAccount_Withdraw_ThrowsException_WhenBalanceIsNotEnough()
+    {
+        var account = new CheckingAccount("Yuchen", 1000m, 10m);
+
+        Assert.Throws<ArgumentException>(() => account.Withdraw(1000m));
     }
 }
