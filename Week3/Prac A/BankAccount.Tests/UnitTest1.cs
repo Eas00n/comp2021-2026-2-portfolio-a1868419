@@ -21,4 +21,12 @@ public class UnitTest1
 
         Assert.Equal(800m, account.Balance);
     }
+
+    [Fact]
+    public void Withdraw_ThrowsException_WhenBalanceIsNotEnough()
+    {
+        var account = new BankAccount("Yuchen", 1000m);
+
+        Assert.Throws<ArgumentException>(() => account.Withdraw(1500m));
+    }
 }
