@@ -49,4 +49,14 @@ public class UnitTest1
 
         Assert.Equal(1500m, account.Balance);
     }
+
+    [Fact]
+    public void CheckingAccount_Withdraw_DeductsTransactionFee()
+    {
+        var account = new CheckingAccount("Yuchen", 1000m, 10m);
+
+        account.Withdraw(100m);
+
+        Assert.Equal(890m, account.Balance);
+    }
 }
