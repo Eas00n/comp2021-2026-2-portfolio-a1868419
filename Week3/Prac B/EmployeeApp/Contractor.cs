@@ -9,4 +9,12 @@ public class Contractor : Employee, IReportable
         Rate = rate;
         Hours = hours;
     }
+
+    public override decimal CalculatePay()
+    {
+        decimal grossPay = Rate * Hours;
+        decimal tax = grossPay * TaxRate;
+
+        return grossPay - tax;
+    }
 }
