@@ -17,4 +17,12 @@ public class Contractor : Employee, IReportable
 
         return grossPay - tax;
     }
+    
+    public string GenerateReport()
+    {
+        return $"Contractor: {Name}\n" +
+               $"Rate: ${Rate:F2}\n" +
+               $"Hours: {Hours}\n" +
+               $"Net Pay: ${CalculatePay():F2}";
+    }
 }
