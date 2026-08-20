@@ -1,0 +1,18 @@
+# Task 2 - Polymorphism
+
+Polymorphism allows different employee types to be stored in the same List<Employee>.
+
+FullTimeEmployee and Contractor are both derived from Employee, so they can be treated as Employee objects.
+
+When CalculatePay() is called, each employee uses its own implementation of the method. This allows the same foreach loop to calculate pay for different employee types without needing separate code for each type.
+
+
+## Reflection
+
+Polymorphism allows different types of objects to be treated as the same base type. In this task, I used a List<Employee> to store both FullTimeEmployee and Contractor objects. I could then use the same CalculatePay() method in a foreach loop, while each employee type calculated the pay differently.
+
+Inheritance allows the derived classes to reuse properties and methods from the Employee class. However, polymorphism allows the program to call the same method and get different behaviour depending on the actual object type. This makes the code more flexible and reduces the need to check the type of each employee.
+
+This is similar to Python because Python also supports inheritance and polymorphism. In Python, method overriding is more flexible and does not require keywords such as virtual and override. C# is more strongly typed, so the relationships between the base class and derived classes are checked more strictly by the compiler.
+
+Overall, I learned that inheritance is useful for sharing common code, while polymorphism is useful for allowing different classes to behave differently through the same interface or base class.

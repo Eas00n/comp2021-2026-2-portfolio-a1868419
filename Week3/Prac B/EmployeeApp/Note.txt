@@ -1,7 +1,0 @@
-# Task 2 - Polymorphism
-
-Polymorphism allows different employee types to be stored in the same List<Employee>.
-
-FullTimeEmployee and Contractor are both derived from Employee, so they can be treated as Employee objects.
-
-When CalculatePay() is called, each employee uses its own implementation of the method. This allows the same foreach loop to calculate pay for different employee types without needing separate code for each type.

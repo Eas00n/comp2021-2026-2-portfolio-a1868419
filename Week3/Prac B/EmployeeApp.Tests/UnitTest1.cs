@@ -50,6 +50,6 @@ public class EmployeeTests
     [Fact]
     public void Employee_TaxRate_Is20Percent()
     {
-        Assert.Equal(0.2m, global::Employee.TaxRate);
+        Assert.Equal(0.2m, Employee.TaxRate);
     }
 }
