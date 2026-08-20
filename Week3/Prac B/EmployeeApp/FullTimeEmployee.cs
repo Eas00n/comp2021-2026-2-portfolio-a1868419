@@ -13,4 +13,11 @@ public class FullTimeEmployee : Employee, IReportable
         decimal tax = AnnualSalary * TaxRate;
         return AnnualSalary - tax;
     }
+
+    public string GenerateReport()
+    {
+        return $"Full Time Employee: {Name}\n" +
+               $"Annual Salary: ${AnnualSalary:F2}\n" +
+               $"Net Pay: ${CalculatePay():F2}";
+    }
 }
