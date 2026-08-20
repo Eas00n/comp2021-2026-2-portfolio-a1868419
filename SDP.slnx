@@ -25,6 +25,7 @@
     <Project Path="Week3/Prac A/BankAccount/BankAccount.csproj" />
   </Folder>
   <Folder Name="/Week3/Prac B/">
+    <Project Path="Week3/Prac B/EmployeeApp.Tests/EmployeeApp.Tests.csproj" />
     <Project Path="Week3/Prac B/EmployeeApp/EmployeeApp.csproj" />
   </Folder>
 </Solution>
