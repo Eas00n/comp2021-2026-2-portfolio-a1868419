@@ -46,4 +46,10 @@ public class EmployeeTests
         Assert.Contains("40", report);
         Assert.Contains("1600.00", report);
     }
+
+    [Fact]
+    public void Employee_TaxRate_Is20Percent()
+    {
+        Assert.Equal(0.2m, global::Employee.TaxRate);
+    }
 }
