@@ -28,4 +28,8 @@
     <Project Path="Week3/Prac B/EmployeeApp.Tests/EmployeeApp.Tests.csproj" />
     <Project Path="Week3/Prac B/EmployeeApp/EmployeeApp.csproj" />
   </Folder>
+  <Folder Name="/Week4/" />
+  <Folder Name="/Week4/Prac A/">
+    <Project Path="Week4/Prac A/BrokenProgram/BrokenProgram.csproj" />
+  </Folder>
 </Solution>
