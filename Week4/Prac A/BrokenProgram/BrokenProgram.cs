@@ -19,14 +19,18 @@ public static class BrokenProgram
     List<int> items = [];
     List<string> symbols = [];
 
-    for (int i = 0; i < input.Split("\n").Length; i += 2)
-    {
-      items.Add(int.Parse(input.Substring((i * 4) + 1, 3)));
+    string[] lines = input.Split("\n", StringSplitOptions.RemoveEmptyEntries);
 
-      if (i != 0)
-      {
-        symbols.Add(input.Split("\n")[i - 1]);
-      }
+    for (int i = 0; i < lines.Length; i++)
+    {
+        if (i % 2 == 0)
+        {
+            items.Add(int.Parse(lines[i]));
+        }
+        else
+        {
+            symbols.Add(lines[i].Trim());
+        }
     }
 
     foreach (var (i, value) in items.Index())
