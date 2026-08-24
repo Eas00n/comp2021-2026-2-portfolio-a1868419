@@ -1,0 +1,23 @@
+# Reflection
+
+1. The incorrect value was **457**, which was read as **57**. The other values were correct because they were read from the correct positions.
+
+2. The `items` list had the wrong value, and the `symbols` did not match the values correctly. I fixed this by reading the input line by line.
+
+3. The debugger helped me check the values step by step. I used a breakpoint and F10 to check `items`, `symbols`, and `total`. This helped me find that 457 became 57.
+
+4. I fixed three code analysis issues:
+
+* Added access modifiers to make the code clearer.
+* Used explicit types instead of `var`.
+* Used `CultureInfo.InvariantCulture` with `int.Parse()`.
+
+These changes made the code clearer and more reliable.
+
+5. I did not fix three warnings:
+
+* CA1303 because resource files are not needed for this small program.
+* IDE0210 because the current `Main()` structure is clear.
+* IDE0160 because it is mainly a style preference.
+
+The program still works correctly, so these changes were not necessary.
