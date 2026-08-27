@@ -1,7 +1,7 @@
-﻿namespace AdventDay7;
-
-using System.IO.Pipelines;
+﻿using System.IO.Pipelines;
 using System.Text;
+
+namespace TachyonManifold;
 /// <summary>
 /// Class <c>Program</c> contains the magical tachyon manifold.
 /// </summary>
@@ -25,10 +25,10 @@ public static class Program
     /// <param name="posX">The X position of the start point.</param>
     /// <param name="posY">The Y position of the start point.</param>
     /// <param name="tachyonGrid">The tachyon manifold grid.</param>
-    public static void processStart(int posX, int posY, List<string> tachyonGrid)
+    public static void ProcessStart(int posX, int posY, List<string> tachyonGrid)
     {
         string line = tachyonGrid[posY + 1];
-        StringBuilder sb = new StringBuilder(line);
+        StringBuilder sb = new(line);
         sb[posX] = '|';
         line = sb.ToString();
         tachyonGrid[posY + 1] = line;
@@ -45,10 +45,10 @@ public static class Program
     /// <param name="posX">The X position of the splitter.</param>
     /// <param name="posY">The Y position of the splitter.</param>
     /// <param name="tachyonGrid">The tachyon manifold grid.</param>
-    public static void processSplitter(int posX, int posY, List<string> tachyonGrid)
+    public static void ProcessSplitter(int posX, int posY, List<string> tachyonGrid)
     {
         string line = tachyonGrid[posY];
-        StringBuilder sb = new StringBuilder(line);
+        StringBuilder sb = new(line);
         if (tachyonGrid[posY - 1][posX] == '|')
         {
             sb[posX - 1] = '|';
@@ -64,10 +64,10 @@ public static class Program
     /// <param name="posX">The X position of the empty square.</param>
     /// <param name="posY">The Y position of the empty square.</param>
     /// <param name="tachyonGrid">The tachyon manifold grid.</param>
-    public static void processEmpty(int posX, int posY, List<string> tachyonGrid)
+    public static void ProcessEmpty(int posX, int posY, List<string> tachyonGrid)
     {
         string line = tachyonGrid[posY];
-        StringBuilder sb = new StringBuilder(line);
+        StringBuilder sb = new(line);
         if (tachyonGrid[posY - 1][posX] == '|')
         {
             sb[posX] = '|';
@@ -76,10 +76,10 @@ public static class Program
         }
     }
 
-    public static void Main(string[] args)
+    public static void Main()
     {
       
-        var sr = new StreamReader(FileToRead);
+        StreamReader sr = new(FileToRead);
         string srText = sr.ReadToEnd();
         int totalCount = 0;
 
@@ -87,7 +87,7 @@ public static class Program
         List<string> tachyonGrid = symbols[..^1];
 
         Console.WriteLine("Begin Tachyon Manifold start state");
-        foreach (var item in tachyonGrid)
+        foreach (string item in tachyonGrid)
         {
             Console.WriteLine(item);
         }
@@ -95,26 +95,26 @@ public static class Program
 
         for (int posY = 0; posY < tachyonGrid.Count; posY++)
         {
-            var item = tachyonGrid[posY];
-            foreach (var (posX, character) in item.Index())
+            string item = tachyonGrid[posY];
+            foreach ((int posX, char character) in item.Index())
             {
                 if (character == 'S')
                 {
-                    processStart(posX, posY, tachyonGrid);
+                    ProcessStart(posX, posY, tachyonGrid);
                 }
                 else if (character == '^')
                 {
-                    processSplitter(posX, posY, tachyonGrid);
+                    ProcessSplitter(posX, posY, tachyonGrid);
                 }
                 else if (posY != 0)
                 {
-                    processEmpty(posX, posY, tachyonGrid);
+                    ProcessEmpty(posX, posY, tachyonGrid);
                 }
             }
         }
         Console.WriteLine($"Begin Taychon Manifold end state");
 
-        foreach (var item in tachyonGrid)
+        foreach (string item in tachyonGrid)
         {
             Console.WriteLine(item);
         }
