@@ -45,7 +45,7 @@ public static class Program
     /// <param name="posX">The X position of the splitter.</param>
     /// <param name="posY">The Y position of the splitter.</param>
     /// <param name="tachyonGrid">The tachyon manifold grid.</param>
-    public static void ProcessSplitter(int posX, int posY, List<string> tachyonGrid)
+    public static int ProcessSplitter(int posX, int posY, List<string> tachyonGrid)
     {
         string line = tachyonGrid[posY];
         StringBuilder sb = new(line);
@@ -55,7 +55,9 @@ public static class Program
             sb[posX + 1] = '|';
             line = sb.ToString();
             tachyonGrid[posY] = line;
+            return 1;
         }
+        return 0;
     }
 
     /// <summary>
@@ -104,7 +106,7 @@ public static class Program
                 }
                 else if (character == '^')
                 {
-                    ProcessSplitter(posX, posY, tachyonGrid);
+                    totalCount += ProcessSplitter(posX, posY, tachyonGrid);
                 }
                 else if (posY != 0)
                 {
