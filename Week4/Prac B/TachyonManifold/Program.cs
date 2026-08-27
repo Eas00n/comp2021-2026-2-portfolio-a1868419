@@ -22,9 +22,9 @@ public static class Program
     /// results in <c>'|'</c>being added to the grid point (0,1)
     /// </example>
     /// </summary>
-    /// <param name="posX"></param>
-    /// <param name="posY"></param>
-    /// <param name="tachyonGrid"></param>
+    /// <param name="posX">The X position of the start point.</param>
+    /// <param name="posY">The Y position of the start point.</param>
+    /// <param name="tachyonGrid">The tachyon manifold grid.</param>
     public static void processStart(int posX, int posY, List<string> tachyonGrid)
     {
         string line = tachyonGrid[posY + 1];
@@ -38,6 +38,13 @@ public static class Program
     This is a multiline comment
     TODO: ProcessSplitter should return an int to add to the total, but it currently returns nothing.
     */
+
+    /// <summary>
+    /// Processes a splitter and creates tachyon paths on both sides.
+    /// </summary>
+    /// <param name="posX">The X position of the splitter.</param>
+    /// <param name="posY">The Y position of the splitter.</param>
+    /// <param name="tachyonGrid">The tachyon manifold grid.</param>
     public static void processSplitter(int posX, int posY, List<string> tachyonGrid)
     {
         string line = tachyonGrid[posY];
@@ -52,11 +59,11 @@ public static class Program
     }
 
     /// <summary>
-    /// 
+    /// Continues the tachyon path through an empty square.
     /// </summary>
-    /// <param name="posX"></param>
-    /// <param name="posY"></param>
-    /// <param name="tachyonGrid"></param>
+    /// <param name="posX">The X position of the empty square.</param>
+    /// <param name="posY">The Y position of the empty square.</param>
+    /// <param name="tachyonGrid">The tachyon manifold grid.</param>
     public static void processEmpty(int posX, int posY, List<string> tachyonGrid)
     {
         string line = tachyonGrid[posY];
