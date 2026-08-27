@@ -1,0 +1,20 @@
+1. symbols and tachyonGrid
+symbols contains all lines from the file.
+tachyonGrid contains all lines except the last line.
+[..^1] means take everything except the last item.
+
+2. posX and character
+posX increases by 1 each iteration.
+character changes to the next character in the string.
+Index() gives both the position and the character.
+A normal foreach only gives the character.
+A for loop needs an index manually.
+
+3. processSplitter() edge case
+The method puts | on both sides of the splitter.
+This can overwrite existing paths.
+So the approach may not be correct for this edge case.
+
+4. Program output
+The program outputs 0, but the expected total is 21.
+The total is incorrect because totalCount is never updated.

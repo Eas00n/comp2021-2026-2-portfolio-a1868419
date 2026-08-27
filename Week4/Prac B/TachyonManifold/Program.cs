@@ -10,7 +10,7 @@ public static class Program
 
     //This is a singleline comment.
     //TODO: Change hardcoded string for the input file to one on your PC.
-    public static string FileToRead { get; set; } = "/home/MarkTheMenace/workspace/portfolio/Topic4B/Example.txt";
+    public static string FileToRead { get; set; } = @"D:\SDP\Week4\Prac B\TachyonManifold\Example.txt";
 
     /// <summary>
     /// This method processes the start of the tachyon manifold
