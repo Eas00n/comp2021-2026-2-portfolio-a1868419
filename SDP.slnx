@@ -32,4 +32,7 @@
   <Folder Name="/Week4/Prac A/">
     <Project Path="Week4/Prac A/BrokenProgram/BrokenProgram.csproj" />
   </Folder>
+  <Folder Name="/Week4/Prac B/">
+    <Project Path="Week4/Prac B/TachyonManifold/TachyonManifold.csproj" />
+  </Folder>
 </Solution>
