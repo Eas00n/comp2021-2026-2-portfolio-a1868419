@@ -11,17 +11,22 @@
     "Askey",
     "Alex"
 };
+Console.WriteLine("Before Sort:");
 
 foreach (string name in names)
 {
     Console.WriteLine(name);
 }
 
-Console.WriteLine("Before Sort:");
-
 Array.Sort(names);
-
 Console.WriteLine("After Sort:");
+
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+
+
 
 // string longest = names[0];
 // string shortest = names[0];
