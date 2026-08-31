@@ -12,30 +12,36 @@
     "Alex"
 };
 
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+
+Console.WriteLine("Before Sort:");
+
+Array.Sort(names);
+
+Console.WriteLine("After Sort:");
+
+// string longest = names[0];
+// string shortest = names[0];
+
 // foreach (string name in names)
 // {
-//     Console.WriteLine(name);
+//     if (name.Length > longest.Length)
+//     {
+//         longest = name;
+//     }
 // }
 
-string longest = names[0];
-string shortest = names[0];
+// Console.WriteLine($"The longest name is: {longest}");
 
-foreach (string name in names)
-{
-    if (name.Length > longest.Length)
-    {
-        longest = name;
-    }
-}
+// foreach (string name in names)
+// {
+//     if (name.Length < shortest.Length)
+//     {
+//         shortest = name;
+//     }
+// }
 
-Console.WriteLine($"The longest name is: {longest}");
-
-foreach (string name in names)
-{
-    if (name.Length < shortest.Length)
-    {
-        shortest = name;
-    }
-}
-
-Console.WriteLine($"The shortest name is: {shortest}");
+// Console.WriteLine($"The shortest name is: {shortest}");
