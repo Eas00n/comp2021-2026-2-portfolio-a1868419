@@ -11,20 +11,28 @@
     "Askey",
     "Alex"
 };
-Console.WriteLine("Before Sort:");
+Console.WriteLine("Before Reverse:");
 
 foreach (string name in names)
 {
     Console.WriteLine(name);
 }
 
-Array.Sort(names);
-Console.WriteLine("After Sort:");
+Array.Reverse(names);
+Console.WriteLine("After Reverse:");
 
 foreach (string name in names)
 {
     Console.WriteLine(name);
 }
+
+// Array.Sort(names);
+// Console.WriteLine("After Sort:");
+
+// foreach (string name in names)
+// {
+//     Console.WriteLine(name);
+// }
 
 
 
