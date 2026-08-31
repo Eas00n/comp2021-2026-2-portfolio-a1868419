@@ -23,3 +23,10 @@ names.AddRange(new List<string>
     "Sarah",
     "Tom"
 });
+
+Console.WriteLine("Student names:");
+
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
