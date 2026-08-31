@@ -71,3 +71,4 @@ string[] oldNames =
 List<string> convertedNames = oldNames.ToList();
 
 names.AddRange(convertedNames);
+string[] finalArray = names.ToArray();
