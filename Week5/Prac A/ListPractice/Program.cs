@@ -34,3 +34,13 @@ foreach (string name in names)
 int index = names.IndexOf("Melissa");
 
 Console.WriteLine($"Melissa index: {index}");
+
+Console.WriteLine("Names containing 'an':");
+
+foreach (string name in names)
+{
+    if (name.Contains("an"))
+    {
+        Console.WriteLine(name);
+    }
+}
