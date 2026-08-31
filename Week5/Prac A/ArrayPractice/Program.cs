@@ -1,1 +1,13 @@
-﻿Console.WriteLine("Hello, World!");
+﻿string[] names =
+{
+    "Yuchen",
+    "Jun",
+    "Anon",
+    "Shanice",
+    "Ecclesiasticalot",
+    "Mark",
+    "Annalie",
+    "Melissa",
+    "Askey",
+    "Alex"
+};
