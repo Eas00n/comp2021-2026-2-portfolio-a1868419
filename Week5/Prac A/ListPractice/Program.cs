@@ -44,3 +44,12 @@ foreach (string name in names)
         Console.WriteLine(name);
     }
 }
+
+int totalLength = 0;
+
+foreach (string name in names)
+{
+    totalLength += name.Length;
+}
+
+Console.WriteLine($"Total name length: {totalLength}");
