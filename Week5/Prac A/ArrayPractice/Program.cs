@@ -12,10 +12,12 @@
     "Alex"
 };
 
-foreach (string name in names)
-{
-    Console.WriteLine(name);
-}
+// foreach (string name in names)
+// {
+//     Console.WriteLine(name);
+// }
+
+string longest = "";
 
 foreach (string name in names)
 {
