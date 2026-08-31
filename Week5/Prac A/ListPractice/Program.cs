@@ -30,3 +30,7 @@ foreach (string name in names)
 {
     Console.WriteLine(name);
 }
+
+int index = names.IndexOf("Melissa");
+
+Console.WriteLine($"Melissa index: {index}");
