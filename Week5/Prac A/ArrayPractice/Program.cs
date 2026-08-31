@@ -17,8 +17,8 @@
 //     Console.WriteLine(name);
 // }
 
-string longest = "";
-string shortest = "";
+string longest = names[0];
+string shortest = names[0];
 
 foreach (string name in names)
 {
