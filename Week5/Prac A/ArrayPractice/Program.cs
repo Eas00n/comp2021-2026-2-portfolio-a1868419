@@ -18,6 +18,7 @@
 // }
 
 string longest = "";
+string shortest = "";
 
 foreach (string name in names)
 {
@@ -28,3 +29,13 @@ foreach (string name in names)
 }
 
 Console.WriteLine($"The longest name is: {longest}");
+
+foreach (string name in names)
+{
+    if (name.Length < shortest.Length)
+    {
+        shortest = name;
+    }
+}
+
+Console.WriteLine($"The shortest name is: {shortest}");
