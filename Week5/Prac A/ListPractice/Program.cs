@@ -12,17 +12,17 @@
     "Alex"
 };
 
-names.Add("Doug");
+// names.Add("Doug");
 
-names.Remove("Doug");
+// names.Remove("Doug");
 
-names.Insert(1, "Paul");
+// names.Insert(1, "Paul");
 
-names.AddRange(new List<string>
-{
-    "Sarah",
-    "Tom"
-});
+// names.AddRange(new List<string>
+// {
+//     "Sarah",
+//     "Tom"
+// });
 
 // Console.WriteLine("Student names:");
 
@@ -31,25 +31,43 @@ names.AddRange(new List<string>
 //     Console.WriteLine(name);
 // }
 
-int index = names.IndexOf("Melissa");
+// int index = names.IndexOf("Melissa");
 
-Console.WriteLine($"Melissa index: {index}");
+// Console.WriteLine($"Melissa index: {index}");
 
-Console.WriteLine("Names containing 'an':");
+// Console.WriteLine("Names containing 'an':");
 
-foreach (string name in names)
+// foreach (string name in names)
+// {
+//     if (name.Contains("an"))
+//     {
+//         Console.WriteLine(name);
+//     }
+// }
+
+// int totalLength = 0;
+
+// foreach (string name in names)
+// {
+//     totalLength += name.Length;
+// }
+
+// Console.WriteLine($"Total name length: {totalLength}");
+
+string[] oldNames =
 {
-    if (name.Contains("an"))
-    {
-        Console.WriteLine(name);
-    }
-}
+    "Yuchen",
+    "Jun",
+    "Anon",
+    "Shanice",
+    "Ecclesiasticalot",
+    "Mark",
+    "Annalie",
+    "Melissa",
+    "Askey",
+    "Alex"
+};
 
-int totalLength = 0;
+List<string> convertedNames = oldNames.ToList();
 
-foreach (string name in names)
-{
-    totalLength += name.Length;
-}
-
-Console.WriteLine($"Total name length: {totalLength}");
+names.AddRange(convertedNames);
