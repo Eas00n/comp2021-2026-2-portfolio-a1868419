@@ -1,17 +1,25 @@
-﻿List<string> students = [];
-
-students.Add("Yuchen");
-students.Add("Jun");
-students.Add("Anon");
-students.Add("Shanice");
-students.Add("Ecclesiasticalot");
-students.Add("Mark");
-students.Add("Annalie");
-students.Add("Melissa");
-students.Add("Askey");
-students.Add("Alex");
-
-foreach (string student in students)
+﻿List<string> names = new List<string>
 {
-    Console.WriteLine(student);
-}
+    "Yuchen",
+    "Jun",
+    "Anon",
+    "Shanice",
+    "Ecclesiasticalot",
+    "Mark",
+    "Annalie",
+    "Melissa",
+    "Askey",
+    "Alex"
+};
+
+names.Add("Doug");
+
+names.Remove("Doug");
+
+names.Insert(1, "Paul");
+
+names.AddRange(new List<string>
+{
+    "Sarah",
+    "Tom"
+});
