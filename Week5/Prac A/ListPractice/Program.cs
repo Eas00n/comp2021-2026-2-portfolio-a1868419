@@ -24,12 +24,12 @@ names.AddRange(new List<string>
     "Tom"
 });
 
-Console.WriteLine("Student names:");
+// Console.WriteLine("Student names:");
 
-foreach (string name in names)
-{
-    Console.WriteLine(name);
-}
+// foreach (string name in names)
+// {
+//     Console.WriteLine(name);
+// }
 
 int index = names.IndexOf("Melissa");
 
