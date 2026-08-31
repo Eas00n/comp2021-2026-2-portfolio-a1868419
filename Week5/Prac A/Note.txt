@@ -1,0 +1,25 @@
+Reflection – Arrays vs Lists
+
+1. Syntax differences
+
+Arrays use `string[]` and have a fixed size.
+Lists use `List<string>` and can change size.
+Lists have methods like `Add()`, `Remove()` and `Insert()`.
+
+2. Performance and flexibility
+
+Arrays are usually faster and use less memory.
+Lists are more flexible because their size can change.
+Lists are easier when adding or removing items.
+
+3. When would you use each?
+
+I would use an Array when I know the number of items will not change.
+I would use a List when I need to add or remove items.
+
+4. My own problem solving
+
+In Task 1, I found a problem when I used `string shortest = ""`.
+The empty string has a length of 0, so no name could be shorter than it.
+I fixed it by using `names[0]` as the starting value.
+This helped me understand why the initial value is important when finding the shortest name.
