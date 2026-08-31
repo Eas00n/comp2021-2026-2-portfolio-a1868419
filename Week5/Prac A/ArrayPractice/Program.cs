@@ -11,3 +11,8 @@
     "Askey",
     "Alex"
 };
+
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
