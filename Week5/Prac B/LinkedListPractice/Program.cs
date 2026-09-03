@@ -27,3 +27,23 @@ foreach (string student in students)
 {
     Console.WriteLine(student);
 }
+
+LinkedListNode<string>? current = students.First;
+
+for (int i = 1; i < 5; i++)
+{
+    current = current?.Next;
+}
+
+if (current != null)
+{
+    Console.WriteLine($"Removing: {current.Value}");
+    students.Remove(current);
+}
+
+Console.WriteLine("\nAfter removing 5th element:");
+
+foreach (string student in students)
+{
+    Console.WriteLine(student);
+}
