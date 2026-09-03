@@ -27,6 +27,18 @@ static LinkedList<Person> SortPeople(LinkedList<Person> people)
     return sorted;
 }
 
+static string PrintPeople(LinkedList<Person> people)
+{
+    string output = "";
+
+    foreach (Person person in people)
+    {
+        output += $"{person.FullName} - Age {person.Age}\n";
+    }
+
+    return output;
+}
+
 public class Person
 {
     public string FirstName { get; private set; }
