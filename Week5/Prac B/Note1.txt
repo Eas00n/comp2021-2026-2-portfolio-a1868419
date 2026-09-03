@@ -1,0 +1,5 @@
+1. List<T> uses indexes and arrays. LinkedList<T> uses nodes and references.
+
+2. LinkedList<T> cannot use normal List syntax because it stores data as linked nodes, not an indexed collection.
+
+3. LinkedList<T> has no indexes. The program must move through nodes one at a time to find an element.
