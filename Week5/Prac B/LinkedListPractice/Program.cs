@@ -16,3 +16,14 @@ students.AddLast("Annalie");
 students.AddLast("Melissa");
 students.AddLast("Askey");
 students.AddLast("Alex");
+
+students.Remove("Melissa");
+students.RemoveFirst();
+students.RemoveLast();
+
+Console.WriteLine("Current List:");
+
+foreach (string student in students)
+{
+    Console.WriteLine(student);
+}
