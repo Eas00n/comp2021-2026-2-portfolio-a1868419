@@ -39,21 +39,27 @@ static string PrintPeople(LinkedList<Person> people)
     return output;
 }
 
-static LinkedList<Person> SortPeople(LinkedList<Person> people)
+static LinkedList<Person> ToLinkedList(List<Person> people)
 {
-    List<Person> temp = people.ToList();
+    LinkedList<Person> linkedPeople = new();
 
-    temp.Sort((a, b) => a.Age.CompareTo(b.Age));
-
-    LinkedList<Person> sorted = new();
-
-    foreach (Person person in temp)
+    foreach (Person person in people)
     {
-        sorted.AddLast(person);
+        linkedPeople.AddLast(person);
     }
 
-    return sorted;
+    return linkedPeople;
 }
+
+LinkedList<Person> linkedPeople = ToLinkedList(people);
+
+Console.WriteLine("Original List:");
+Console.WriteLine(PrintPeople(linkedPeople));
+
+LinkedList<Person> sortedPeople = SortPeople(linkedPeople);
+
+Console.WriteLine("Sorted List:");
+Console.WriteLine(PrintPeople(sortedPeople));
 
 public class Person
 {
