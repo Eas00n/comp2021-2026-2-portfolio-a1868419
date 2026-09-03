@@ -11,6 +11,18 @@ people.Add(new Person("Melissa", "Green", 29));
 people.Add(new Person("Askey", "Jones", 18));
 people.Add(new Person("Alex", "Taylor", 31));
 
+static LinkedList<Person> ToLinkedList(List<Person> people)
+{
+    LinkedList<Person> linkedPeople = new();
+
+    foreach (Person person in people)
+    {
+        linkedPeople.AddLast(person);
+    }
+
+    return linkedPeople;
+}
+
 static LinkedList<Person> SortPeople(LinkedList<Person> people)
 {
     List<Person> temp = people.ToList();
@@ -37,18 +49,6 @@ static string PrintPeople(LinkedList<Person> people)
     }
 
     return output;
-}
-
-static LinkedList<Person> ToLinkedList(List<Person> people)
-{
-    LinkedList<Person> linkedPeople = new();
-
-    foreach (Person person in people)
-    {
-        linkedPeople.AddLast(person);
-    }
-
-    return linkedPeople;
 }
 
 LinkedList<Person> linkedPeople = ToLinkedList(people);
