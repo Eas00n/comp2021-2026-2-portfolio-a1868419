@@ -11,6 +11,22 @@ people.Add(new Person("Melissa", "Green", 29));
 people.Add(new Person("Askey", "Jones", 18));
 people.Add(new Person("Alex", "Taylor", 31));
 
+static LinkedList<Person> SortPeople(LinkedList<Person> people)
+{
+    List<Person> temp = people.ToList();
+
+    temp.Sort((a, b) => a.Age.CompareTo(b.Age));
+
+    LinkedList<Person> sorted = new();
+
+    foreach (Person person in temp)
+    {
+        sorted.AddLast(person);
+    }
+
+    return sorted;
+}
+
 public class Person
 {
     public string FirstName { get; private set; }
