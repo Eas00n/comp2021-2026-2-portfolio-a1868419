@@ -1,0 +1,3 @@
+Yes.
+The changes propagated to both the List and LinkedList because they store references to the same Person object, not separate copies.
+When the Person object was modified, both collections reflected the updated values.
