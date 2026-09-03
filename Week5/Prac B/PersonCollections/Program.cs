@@ -39,6 +39,22 @@ static string PrintPeople(LinkedList<Person> people)
     return output;
 }
 
+static LinkedList<Person> SortPeople(LinkedList<Person> people)
+{
+    List<Person> temp = people.ToList();
+
+    temp.Sort((a, b) => a.Age.CompareTo(b.Age));
+
+    LinkedList<Person> sorted = new();
+
+    foreach (Person person in temp)
+    {
+        sorted.AddLast(person);
+    }
+
+    return sorted;
+}
+
 public class Person
 {
     public string FirstName { get; private set; }
