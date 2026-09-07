@@ -30,12 +30,52 @@ static Queue<BankAccount> StackToQueue(Stack<BankAccount> stack)
     return queue;
 }
 
+static Queue<BankAccount> SortQueue(Queue<BankAccount> queue)
+{
+    Queue<BankAccount> sortedQueue = new();
+
+    int count = queue.Count;
+
+    for (int i = 0; i < count; i++)
+    {
+        Queue<BankAccount> tempQueue = new();
+
+        BankAccount lowestBalanceAccount = queue.Peek();
+
+        while (queue.Count > 0)
+        {
+            BankAccount account = queue.Dequeue();
+
+            if (account.Balance < lowestBalanceAccount.Balance)
+            {
+                lowestBalanceAccount = account;
+            }
+
+            tempQueue.Enqueue(account);
+        }
+
+        while (tempQueue.Count > 0)
+        {
+            BankAccount account = tempQueue.Dequeue();
+
+            if (account != lowestBalanceAccount)
+            {
+                queue.Enqueue(account);
+            }
+        }
+
+        sortedQueue.Enqueue(lowestBalanceAccount);
+    }
+
+    return sortedQueue;
+}
+
 Queue<BankAccount> queueAccounts = StackToQueue(accounts);
 
-Console.WriteLine();
-Console.WriteLine("Queue:");
+// Console.WriteLine();
+// Console.WriteLine("Queue:");
 
-foreach (BankAccount account in queueAccounts)
-{
-    Console.WriteLine(account);
-}
+// foreach (BankAccount account in queueAccounts)
+// {
+//     Console.WriteLine(account);
+// }
