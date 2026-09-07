@@ -79,3 +79,20 @@ Queue<BankAccount> queueAccounts = StackToQueue(accounts);
 // {
 //     Console.WriteLine(account);
 // }
+Console.WriteLine();
+Console.WriteLine("Queue Before Sorting:");
+
+foreach (BankAccount account in queueAccounts)
+{
+    Console.WriteLine(account);
+}
+
+Queue<BankAccount> sortedQueue = SortQueue(queueAccounts);
+
+Console.WriteLine();
+Console.WriteLine("Queue After Sorting:");
+
+foreach (BankAccount account in sortedQueue)
+{
+    Console.WriteLine(account);
+}
