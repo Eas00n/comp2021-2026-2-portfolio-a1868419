@@ -1,31 +1,31 @@
-﻿Stack<string> undoHistory = new();
+﻿Queue<string> printQueue = new();
 
-undoHistory.Push("Typed Text");
-undoHistory.Push("Inserted Image");
-undoHistory.Push("Changed Colour");
+printQueue.Enqueue("Print Job 1");
+printQueue.Enqueue("Print Job 2");
+printQueue.Enqueue("Print Job 3");
 
-Console.WriteLine("Initial Stack:");
+Console.WriteLine("Initial Queue:");
 
-foreach (string action in undoHistory)
+foreach (string job in printQueue)
 {
-    Console.WriteLine(action);
+    Console.WriteLine(job);
 }
 
 Console.WriteLine();
 
-Console.WriteLine($"Top Item: {undoHistory.Peek()}");
+Console.WriteLine($"Front Job: {printQueue.Peek()}");
 
 Console.WriteLine();
 
-string removedAction = undoHistory.Pop();
+string completedJob = printQueue.Dequeue();
 
-Console.WriteLine($"Removed Action: {removedAction}");
+Console.WriteLine($"Completed Job: {completedJob}");
 
 Console.WriteLine();
 
-Console.WriteLine("Stack After Pop:");
+Console.WriteLine("Queue After Dequeue:");
 
-foreach (string action in undoHistory)
+foreach (string job in printQueue)
 {
-    Console.WriteLine(action);
+    Console.WriteLine(job);
 }
