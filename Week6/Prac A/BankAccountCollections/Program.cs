@@ -1,3 +1,5 @@
+using System.Threading.Tasks.Dataflow;
+
 Stack<BankAccount> accounts = new();
 
 accounts.Push(new BankAccount("Yuchen", 1000));
@@ -29,3 +31,5 @@ static Queue<BankAccount> StackToQueue(Stack<BankAccount> stack)
 
     return queue;
 }
+
+Queue<BankAccount> queueAccounts = StackToQueue(accounts);
