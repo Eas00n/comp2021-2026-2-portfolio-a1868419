@@ -17,3 +17,15 @@ foreach (BankAccount account in accounts)
 {
     Console.WriteLine(account);
 }
+
+static Queue<BankAccount> StackToQueue(Stack<BankAccount> stack)
+{
+    Queue<BankAccount> queue = new();
+
+    foreach (BankAccount account in stack)
+    {
+        queue.Enqueue(account);
+    }
+
+    return queue;
+}
