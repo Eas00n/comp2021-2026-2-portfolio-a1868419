@@ -10,3 +10,10 @@ accounts.Push(new BankAccount("Annalie", 3500));
 accounts.Push(new BankAccount("Melissa", 5000));
 accounts.Push(new BankAccount("Askey", 1200));
 accounts.Push(new BankAccount("Alex", 2200));
+
+Console.WriteLine("Stack:");
+
+foreach (BankAccount account in accounts)
+{
+    Console.WriteLine(account);
+}
