@@ -33,3 +33,11 @@ static Queue<BankAccount> StackToQueue(Stack<BankAccount> stack)
 }
 
 Queue<BankAccount> queueAccounts = StackToQueue(accounts);
+
+Console.WriteLine();
+Console.WriteLine("Queue:");
+
+foreach (BankAccount account in queueAccounts)
+{
+    Console.WriteLine(account);
+}
