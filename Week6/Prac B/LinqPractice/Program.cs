@@ -19,9 +19,17 @@ foreach (string name in names)
     Console.WriteLine(name);
 }
 
-// LINQ OrderBy
 var orderedNames = names.OrderBy(x => x);
 
 Console.WriteLine($"Type of orderedNames: {orderedNames.GetType()}");
 
 Console.WriteLine();
+
+List<string> sortedNames = orderedNames.ToList();
+
+Console.WriteLine("Sorted List:");
+
+foreach (string name in sortedNames)
+{
+    Console.WriteLine(name);
+}
