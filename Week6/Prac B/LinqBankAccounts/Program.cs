@@ -19,28 +19,28 @@ foreach (BankAccount account in accountsStack)
 }
 
 // Task2
-var stackOwners = accountsStack
-    .Select(x => x.Owner)
-    .OrderBy(x => x);
+// var stackOwners = accountsStack
+//     .Select(x => x.Owner)
+//     .OrderBy(x => x);
 
-Console.WriteLine("Stack Owners:");
+// Console.WriteLine("Stack Owners:");
 
-foreach (string owner in stackOwners)
-{
-    Console.WriteLine(owner);
-}
+// foreach (string owner in stackOwners)
+// {
+//     Console.WriteLine(owner);
+// }
 
-var queueOwners = accountsQueue
-    .Select(x => x.Owner)
-    .OrderBy(x => x);
+// var queueOwners = accountsQueue
+//     .Select(x => x.Owner)
+//     .OrderBy(x => x);
 
-Console.WriteLine();
-Console.WriteLine("Queue Owners:");
+// Console.WriteLine();
+// Console.WriteLine("Queue Owners:");
 
-foreach (string owner in queueOwners)
-{
-    Console.WriteLine(owner);
-}
+// foreach (string owner in queueOwners)
+// {
+//     Console.WriteLine(owner);
+// }
 
 // Task3
 var stackResults = accountsStack
@@ -51,3 +51,27 @@ var stackResults = accountsStack
         Balance = x.Balance
     });
     .OrderBy(x => x.Owner);
+
+Console.WriteLine("Stack Results:");
+
+foreach (var account in stackResults)
+{
+    Console.WriteLine($"{account.Owner} - {account.Balance:F2}");
+}
+
+var queueResults = accountsQueue
+    .Where(x => x.Owner.Contains("e"))
+    .Select(x => new
+    {
+        Owner = x.Owner,
+        Balance = x.Balance
+    })
+    .OrderBy(x => x.Balance);
+
+Console.WriteLine();
+Console.WriteLine("Queue Results:");
+
+foreach (var account in queueResults)
+{
+    Console.WriteLine($"{account.Owner} - {account.Balance:F2}");
+}
