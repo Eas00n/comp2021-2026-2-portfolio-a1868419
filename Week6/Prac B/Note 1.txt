@@ -1,0 +1,12 @@
+1.It returns an IOrderedEnumerable<string>.
+  It is not a List<string>.
+
+2.OrderBy() creates a new ordered collection and does not change the original list.
+  Sort() changes the original list directly.
+
+3.x represents each item in the collection.
+  OrderBy uses x to decide how the items should be sorted.
+
+4.x is a lambda parameter.
+  Yes, any valid name can be used, such as name or item.
+  The type is inferred automatically by C# from the collection type.
