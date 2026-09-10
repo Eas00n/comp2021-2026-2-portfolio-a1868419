@@ -1,0 +1,10 @@
+1.I prefer LINQ because the code is shorter and easier to understand. 
+  The sorting algorithm in the previous prac needed more steps and code. LINQ can filter, select and sort the data more easily.
+
+2.At first, the LINQ syntax was a little unusual for me. 
+  After using Where(), Select() and OrderBy(), I found it easier to understand. 
+The method chaining is also useful.
+
+3.No, the syntax did not need to change. 
+  Both Stack and Queue can use LINQ methods because they implement IEnumerable. 
+  The same Where(), Select() and OrderBy() syntax can be used for both.
