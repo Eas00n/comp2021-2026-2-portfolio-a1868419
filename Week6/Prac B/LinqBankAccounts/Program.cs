@@ -19,8 +19,12 @@ foreach (BankAccount account in accountsStack)
 }
 
 var stackOwners = accountsStack
-    .Select(x => x.Owner);
-
-var stackOwners = accountsStack
     .Select(x => x.Owner)
     .OrderBy(x => x);
+
+Console.WriteLine("Stack Owners:");
+
+foreach (string owner in stackOwners)
+{
+    Console.WriteLine(owner);
+}
