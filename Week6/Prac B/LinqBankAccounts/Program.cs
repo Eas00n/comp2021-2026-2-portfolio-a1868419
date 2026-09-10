@@ -17,3 +17,6 @@ foreach (BankAccount account in accountsStack)
 {
     accountsQueue.Enqueue(account);
 }
+
+var stackOwners = accountsStack
+    .Select(x => x.Owner);
