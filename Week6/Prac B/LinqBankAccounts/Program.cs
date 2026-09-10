@@ -49,7 +49,7 @@ var stackResults = accountsStack
     {
         Owner = x.Owner,
         Balance = x.Balance
-    });
+    })
     .OrderBy(x => x.Owner);
 
 Console.WriteLine("Stack Results:");
