@@ -28,3 +28,15 @@ foreach (string owner in stackOwners)
 {
     Console.WriteLine(owner);
 }
+
+var queueOwners = accountsQueue
+    .Select(x => x.Owner)
+    .OrderBy(x => x);
+
+Console.WriteLine();
+Console.WriteLine("Queue Owners:");
+
+foreach (string owner in queueOwners)
+{
+    Console.WriteLine(owner);
+}
