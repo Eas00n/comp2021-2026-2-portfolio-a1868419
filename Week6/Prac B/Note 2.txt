@@ -1,0 +1,5 @@
+No, the syntax did not need to change.
+
+Both Stack and Queue can use LINQ methods such as Select() and OrderBy().
+
+The main difference is that Stack uses LIFO and Queue uses FIFO. However, LINQ can work with both collections because they implement IEnumerable.

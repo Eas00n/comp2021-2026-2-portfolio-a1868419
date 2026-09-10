@@ -18,6 +18,7 @@ foreach (BankAccount account in accountsStack)
     accountsQueue.Enqueue(account);
 }
 
+// Task2
 var stackOwners = accountsStack
     .Select(x => x.Owner)
     .OrderBy(x => x);
@@ -40,3 +41,13 @@ foreach (string owner in queueOwners)
 {
     Console.WriteLine(owner);
 }
+
+// Task3
+var stackResults = accountsStack
+    .Where(x => x.Owner.Contains("e"))
+    .Select(x => new
+    {
+        Owner = x.Owner,
+        Balance = x.Balance
+    });
+    .OrderBy(x => x.Owner);
