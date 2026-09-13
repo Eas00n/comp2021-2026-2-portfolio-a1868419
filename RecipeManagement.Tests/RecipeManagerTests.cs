@@ -140,4 +140,14 @@ public sealed class RecipeManagerTests
         Assert.Equal(1, manager.CookingPlanCount);
         Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
     }
+
+    [Fact]
+    public void EmptyRemovedRecipeStackIsHandled()
+    {
+        var manager = CreateManager();
+
+        Assert.Equal(0, manager.RemovedRecipeCount);
+        Assert.Null(manager.PeekLastRemovedRecipe());
+        Assert.False(manager.RestoreLastRemovedRecipe());
+    }
 }
