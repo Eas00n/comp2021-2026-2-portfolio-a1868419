@@ -129,4 +129,15 @@ public sealed class RecipeManagerTests
         Assert.Equal(1, manager.CookingPlanCount);
         Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
     }
+
+    [Fact]
+    public void CannotAddDuplicateRecipeToCookingPlan()
+    {
+        var manager = CreateManager();
+
+        Assert.True(manager.AddRecipeToCookingPlan(20));
+        Assert.False(manager.AddRecipeToCookingPlan(20));
+        Assert.Equal(1, manager.CookingPlanCount);
+        Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
+    }
 }
