@@ -17,6 +17,7 @@ SDP
 ├── Week3
 ├── Week4
 ├── Week5
+├── Week6
 └── README.md
 ```
 
@@ -83,6 +84,22 @@ SDP
 - Used collections of custom Person objects
 
 ---
+## Topic 6 – Collections, Testing and Git Workflow
+
+### Description
+
+- Worked with Dictionary<TKey, TValue>
+- Used Stack<T> for Last-In-First-Out (LIFO) operations
+- Used Queue<T> for First-In-First-Out (FIFO) operations
+- Used LinkedList<T> to manage ordered data
+- Practised using different C# collection types
+- Created unit tests for collection operations
+- Tested normal and empty collection cases
+- Tested duplicate and missing data
+- Used Git commits to record development progress
+- Continued using GitHub as part of the development workflow
+
+---
 
 ## Running Projects
 
@@ -122,3 +139,6 @@ Learned debugging, refactoring and coding standards.
 
 ### Week 5
 Learned arrays, lists, linked lists and collection management.
+
+### Week 6
+Practised different C# collections, including dictionaries, stacks and queues. Improved unit testing skills and continued using Git to record development progress.
