@@ -36,3 +36,24 @@
     <Project Path="Week4/Prac B/TachyonManifold/TachyonManifold.csproj" />
   </Folder>
 </Solution>
+
+  <Folder Name="/Week5/" />
+  <Folder Name="/Week5/Prac A/">
+    <Project Path="Week5/Prac A/ArrayPractice/ArrayPractice.csproj" />
+    <Project Path="Week5/Prac A/ListPractice/ListPractice.csproj" />
+  </Folder>
+  <Folder Name="/Week5/Prac B/">
+    <Project Path="Week5/Prac B/LinkedListPractice/LinkedListPractice.csproj" />
+    <Project Path="Week5/Prac B/PersonCollections/PersonCollections.csproj" />
+  </Folder>
+
+  <Folder Name="/Week6/" />
+  <Folder Name="/Week6/Prac A/">
+    <Project Path="Week6/Prac A/BankAccountCollections/BankAccountCollections.csproj" />
+    <Project Path="Week6/Prac A/StackPractice/StackPractice.csproj" />
+  </Folder>
+  <Folder Name="/Week6/Prac B/">
+    <Project Path="Week6/Prac B/LinqBankAccounts/LinqBankAccounts.csproj" />
+    <Project Path="Week6/Prac B/LinqPractice/LinqPractice.csproj" />
+  </Folder>
+</Solution>
