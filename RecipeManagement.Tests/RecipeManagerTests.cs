@@ -174,4 +174,22 @@ public sealed class RecipeManagerTests
         Assert.Null(manager.PeekNextInstruction());
         Assert.Null(manager.CompleteNextInstruction());
     }
+
+    [Fact]
+    public void RemovedRecipesUseLastInFirstOut()
+    {
+        var manager = CreateManager();
+
+        manager.AddRecipeToCookingPlan(10);
+        manager.AddRecipeToCookingPlan(20);
+
+        Assert.True(manager.RemoveRecipeFromCookingPlan(10));
+        Assert.True(manager.RemoveRecipeFromCookingPlan(20));
+
+        Assert.Equal(2, manager.RemovedRecipeCount);
+        Assert.Equal(20, manager.PeekLastRemovedRecipe());
+        Assert.True(manager.RestoreLastRemovedRecipe());
+        Assert.Equal(1, manager.RemovedRecipeCount);
+        Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
+    }
 }
