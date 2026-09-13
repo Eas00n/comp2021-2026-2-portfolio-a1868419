@@ -19,7 +19,11 @@ public sealed class RecipeManager : IRecipeManager
     public RecipeManager(IEnumerable<Recipe> recipes)
     {
         // TODO Part A: validate recipes and build Dictionary<int, Recipe>.
-        _ = recipes;
+        this.recipes = new Dictionary<int, Recipe>();
+        shoppingList = new List<string>();
+        cookingPlan = new LinkedList<int>();
+        removedRecipes = new Stack<int>();
+        instructions = new Queue<string>();
     }
 
     public int RecipeCount => 0;
