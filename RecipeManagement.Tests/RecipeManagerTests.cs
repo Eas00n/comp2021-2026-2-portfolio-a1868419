@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Net.Mail;
 using RecipeManagement.Core;
 
 namespace RecipeManagement.Tests;
@@ -113,5 +114,19 @@ public sealed class RecipeManagerTests
         manager.ClearShoppingList();
         Assert.Empty(manager.GetShoppingList());
         Assert.Equal(0, manager.ShoppingItemCount);
+    }
+
+    [Fact]
+    public void CookingPlanCanAddGetAndRemoveRecipes()
+    {
+        var manager = CreateManager();
+
+        Assert.True(manager.AddRecipeToCookingPlan(10));
+        Assert.True(manager.AddRecipeToCookingPlan(20));
+        Assert.Equal(2, manager.CookingPlanCount);
+        Assert.Equal(new[] { 10, 20 }, manager.GetCookingPlan());
+        Assert.True(manager.RemoveRecipeFromCookingPlan(10));
+        Assert.Equal(1, manager.CookingPlanCount);
+        Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
     }
 }
