@@ -19,9 +19,32 @@ public sealed class RecipeManager : IRecipeManager
     public RecipeManager(IEnumerable<Recipe> recipes)
     {
         // TODO Part A: validate recipes and build Dictionary<int, Recipe>.
+        if (recipes == null)
+        {
+            throw new ArgumentException(nameof(recipes));
+        }
         this.recipes = new Dictionary<int, Recipe>();
         foreach (var recipe in recipes)
         {
+            if (recipe == null)
+            {
+                throw new ArgumentException("Recipe cannot be null.");
+            }
+
+            if (recipe.Id <= 0)
+            {
+                throw new ArgumentException("Recipe ID must be positive.");
+            }
+
+            if (string.IsNullOrWhiteSpace(recipe.Title))
+            {
+                throw new ArgumentException("Recipe title cannot be blank.");
+            }
+
+            if (this.recipes.ContainsKey(recipe.Id))
+            {
+                throw new ArgumentException("Duplicate recipe ID.");
+            }
             this.recipes.Add(recipe.Id, recipe);
         }
         shoppingList = new List<string>();
@@ -42,6 +65,22 @@ public sealed class RecipeManager : IRecipeManager
         {
             return false;
         }
+
+        if (recipe == null)
+        {
+            throw new ArgumentException(nameof(recipe));
+        }
+
+        if (recipe.Id <= 0)
+        {
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(recipe.Title))
+        {
+            return false;
+        }
+       
         recipes.Add(recipe.Id, recipe);
         return true;
     }
@@ -58,6 +97,11 @@ public sealed class RecipeManager : IRecipeManager
     public bool RemoveRecipe(int recipeId)
     {
         if (!recipes.ContainsKey(recipeId))
+        {
+            return false;
+        }
+
+        if (cookingPlan.Contains(recipeId))
         {
             return false;
         }
