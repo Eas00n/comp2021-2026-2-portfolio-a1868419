@@ -137,8 +137,14 @@ public sealed class RecipeManager : IRecipeManager
         return instructions.Peek();
     }
 
-    public string? CompleteNextInstruction() =>
-        throw new NotImplementedException("Part A: implement CompleteNextInstruction.");
+    public string? CompleteNextInstruction()
+    {
+        if (instructions.Count == 0)
+        {
+            return null;
+        }
+        return instructions.Dequeue();
+    }
 
     public IReadOnlyList<Recipe> SearchByTitle(string searchText) =>
         throw new NotImplementedException("Part B: implement SearchByTitle.");
