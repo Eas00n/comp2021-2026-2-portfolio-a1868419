@@ -31,10 +31,10 @@ public sealed class RecipeManager : IRecipeManager
     }
 
     public int RecipeCount => recipes.Count;
-    public int ShoppingItemCount => 0;
-    public int CookingPlanCount => 0;
-    public int PendingInstructionCount => 0;
-    public int RemovedRecipeCount => 0;
+    public int ShoppingItemCount => shoppingList.Count;
+    public int CookingPlanCount => cookingPlan.Count;
+    public int PendingInstructionCount => instructions.Count;
+    public int RemovedRecipeCount => removedRecipes.Count;
 
     public bool AddRecipe(Recipe recipe)
     {
