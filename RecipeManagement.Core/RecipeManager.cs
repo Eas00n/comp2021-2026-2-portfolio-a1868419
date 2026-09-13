@@ -21,7 +21,7 @@ public sealed class RecipeManager : IRecipeManager
         // TODO Part A: validate recipes and build Dictionary<int, Recipe>.
         if (recipes == null)
         {
-            throw new ArgumentException(nameof(recipes));
+            throw new ArgumentNullException(nameof(recipes));
         }
         this.recipes = new Dictionary<int, Recipe>();
         foreach (var recipe in recipes)
@@ -61,14 +61,9 @@ public sealed class RecipeManager : IRecipeManager
 
     public bool AddRecipe(Recipe recipe)
     {
-        if (recipes.ContainsKey(recipe.Id))
-        {
-            return false;
-        }
-
         if (recipe == null)
         {
-            throw new ArgumentException(nameof(recipe));
+            throw new ArgumentNullException(nameof(recipe));
         }
 
         if (recipe.Id <= 0)
@@ -77,6 +72,11 @@ public sealed class RecipeManager : IRecipeManager
         }
 
         if (string.IsNullOrWhiteSpace(recipe.Title))
+        {
+            return false;
+        }
+
+        if (recipes.ContainsKey(recipe.Id))
         {
             return false;
         }
@@ -163,7 +163,19 @@ public sealed class RecipeManager : IRecipeManager
         {
             return false;
         }
-        int recipeId = removedRecipes.Pop();
+        int recipeId = removedRecipes.Peek();
+
+        if (!recipes.ContainsKey(recipeId))
+        {
+            return false;
+        }
+
+        if (cookingPlan.Contains(recipeId))
+        {
+            return false;
+        }
+
+        removedRecipes.Pop();
         cookingPlan.AddLast(recipeId);
         return true;
     }
@@ -185,6 +197,11 @@ public sealed class RecipeManager : IRecipeManager
     public bool StartCooking(int recipeId)
     {
         if (!recipes.TryGetValue(recipeId, out Recipe? recipe))
+        {
+            return false;
+        }
+
+        if (recipe.Instructions.Count == 0)
         {
             return false;
         }
