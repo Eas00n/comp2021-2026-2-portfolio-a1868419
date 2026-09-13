@@ -75,4 +75,19 @@ public sealed class RecipeManagerTests
         Assert.True(manager.RemoveRecipe(398654));
         Assert.Null(manager.FindRecipe(398654));
     }
+
+    [Fact]
+    public void CannotAddDuplicateRecipeId()
+    {
+        var manager = CreateManager();
+        var recipe = new Recipe
+        {
+            Id = 398654,
+            Title = "Duplicate Recipe"
+        };
+        Assert.True(manager.AddRecipe(recipe));
+        Assert.False(manager.AddRecipe(recipe));
+        Assert.Equal(3, manager.RecipeCount);
+        Assert.Equal("Duplicate Recipe", manager.FindRecipe(398654)?.Title);
+    }
 }
