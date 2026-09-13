@@ -164,4 +164,14 @@ public sealed class RecipeManagerTests
         Assert.Equal("Second step", manager.CompleteNextInstruction());
         Assert.Equal(0, manager.PendingInstructionCount);
     }
+
+    [Fact]
+    public void EmptyInstructionQueueIsHandled()
+    {
+        var manager = CreateManager();
+
+        Assert.Equal(0, manager.PendingInstructionCount);
+        Assert.Null(manager.PeekNextInstruction());
+        Assert.Null(manager.CompleteNextInstruction());
+    }
 }
