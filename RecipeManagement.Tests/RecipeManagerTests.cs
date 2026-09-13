@@ -192,4 +192,14 @@ public sealed class RecipeManagerTests
         Assert.Equal(1, manager.RemovedRecipeCount);
         Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
     }
+
+    [Fact]
+    public void RecipeInstructionsCanBeLoadedFromCatalogue()
+    {
+        var manager = CreateManager();
+
+        Assert.Equal("Recipe A", manager.FindRecipe(10)?.Title);
+        Assert.True(manager.StartCooking(10));
+        Assert.Equal("First step", manager.PeekNextInstruction());
+    }
 }
