@@ -57,4 +57,22 @@ public sealed class RecipeManagerTests
             }
         });
     }
+
+    // My own tests
+    [Fact]
+    public void DictionaryCanAddFindAndRemoveRecipe()
+    {
+        var manager = CreateManager();
+        var recipe = new Recipe
+        {
+            Id = 398654,
+            Title = "Recipe C",
+
+        };
+
+        Assert.True(manager.AddRecipe(recipe));
+        Assert.Equal(recipe, manager.FindRecipe(398654));
+        Assert.True(manager.RemoveRecipe(398654));
+        Assert.Null(manager.FindRecipe(398654));
+    }
 }
