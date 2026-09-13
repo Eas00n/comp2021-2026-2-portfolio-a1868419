@@ -100,4 +100,18 @@ public sealed class RecipeManagerTests
         Assert.False(manager.RemoveRecipe(50));
         Assert.Equal(2, manager.RecipeCount);
     }
+
+    [Fact]
+    public void ShoppingListCanAddGetAndClearIngredients()
+    {
+        var manager = CreateManager();
+
+        Assert.Equal(1, manager.AddIngredientsToShoppingList(10));
+        Assert.Equal(1, manager.ShoppingItemCount);
+        Assert.Equal(new[] { "1 apple" }, manager.GetShoppingList());
+
+        manager.ClearShoppingList();
+        Assert.Empty(manager.GetShoppingList());
+        Assert.Equal(0, manager.ShoppingItemCount);
+    }
 }
