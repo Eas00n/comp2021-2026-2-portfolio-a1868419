@@ -30,7 +30,7 @@ public sealed class RecipeManager : IRecipeManager
         instructions = new Queue<string>();
     }
 
-    public int RecipeCount => 0;
+    public int RecipeCount => recipes.Count;
     public int ShoppingItemCount => 0;
     public int CookingPlanCount => 0;
     public int PendingInstructionCount => 0;
