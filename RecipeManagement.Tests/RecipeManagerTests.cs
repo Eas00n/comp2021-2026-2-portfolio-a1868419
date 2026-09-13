@@ -150,4 +150,18 @@ public sealed class RecipeManagerTests
         Assert.Null(manager.PeekLastRemovedRecipe());
         Assert.False(manager.RestoreLastRemovedRecipe());
     }
+
+    [Fact]
+    public void CookingInstructionsUseQueueInOrder()
+    {
+        var manager = CreateManager();
+
+        Assert.True(manager.StartCooking(10));
+        Assert.Equal(2, manager.PendingInstructionCount);
+        Assert.Equal("First step", manager.PeekNextInstruction());
+        Assert.Equal("First step", manager.CompleteNextInstruction());
+        Assert.Equal(1, manager.PendingInstructionCount);
+        Assert.Equal("Second step", manager.CompleteNextInstruction());
+        Assert.Equal(0, manager.PendingInstructionCount);
+    }
 }
