@@ -20,6 +20,10 @@ public sealed class RecipeManager : IRecipeManager
     {
         // TODO Part A: validate recipes and build Dictionary<int, Recipe>.
         this.recipes = new Dictionary<int, Recipe>();
+        foreach (var recipe in recipes)
+        {
+            this.recipes.Add(recipe.Id, recipe);
+        }
         shoppingList = new List<string>();
         cookingPlan = new LinkedList<int>();
         removedRecipes = new Stack<int>();
