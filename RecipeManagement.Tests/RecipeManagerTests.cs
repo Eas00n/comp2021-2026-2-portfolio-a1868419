@@ -90,4 +90,14 @@ public sealed class RecipeManagerTests
         Assert.Equal(3, manager.RecipeCount);
         Assert.Equal("Duplicate Recipe", manager.FindRecipe(398654)?.Title);
     }
+
+    [Fact]
+    public void MissingRecipeIdIsHandled()
+    {
+        var manager = CreateManager();
+
+        Assert.Null(manager.FindRecipe(50));
+        Assert.False(manager.RemoveRecipe(50));
+        Assert.Equal(2, manager.RecipeCount);
+    }
 }
