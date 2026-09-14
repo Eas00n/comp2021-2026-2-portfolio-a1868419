@@ -13,7 +13,7 @@ void DisplayScores(SortedSet<int> scores)
     Console.WriteLine($"Highest score: {scores.Max}");
     Console.WriteLine();
 }
-
+//Task1
 // SortedSet<int> scores = new();
 // Random rand = new();
 // for (int i = 0; i < 10; i++)
@@ -32,6 +32,16 @@ void DisplayScores(SortedSet<int> scores)
 // Console.WriteLine("After adding duplicate High score:");
 // DisplayScores(scores);
 
+//Task2
+void DisplayAccounts(SortedSet<BankAccount> accounts)
+{
+    foreach (BankAccount account in accounts)
+    {
+        Console.WriteLine(account);
+    }
+}
+
+//Task2 Test
 SortedSet<BankAccount> sortedBankSet = new SortedSet<BankAccount>(new BankComparer());
 
 BankAccount account1 = new("Yuchen", 100);
