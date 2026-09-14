@@ -31,3 +31,6 @@ DisplayScores(scores);
 scores.Add(160);
 Console.WriteLine("After adding duplicate High score:");
 DisplayScores(scores);
+
+SortedSet<BankAccount> sortedBankSet = new();
+sortedBankSet.Add(account1);
