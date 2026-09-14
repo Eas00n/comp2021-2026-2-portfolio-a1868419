@@ -21,3 +21,13 @@ for (int i = 0; i < 10; i++)
     scores.Add(rand.Next(0, 101));
 }
 
+Console.WriteLine("Initial scores:");
+DisplayScores(scores);
+
+scores.Add(160);
+Console.WriteLine("After adding High score:");
+DisplayScores(scores);
+
+scores.Add(160);
+Console.WriteLine("After adding duplicate High score:");
+DisplayScores(scores);
