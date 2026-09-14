@@ -60,6 +60,7 @@ public sealed class RecipeManagerTests
     }
 
     // My own tests
+    //Tests that a recipe can be added to the Dictionary, found by its ID, and then removed successfully.
     [Fact]
     public void DictionaryCanAddFindAndRemoveRecipe()
     {
@@ -77,6 +78,7 @@ public sealed class RecipeManagerTests
         Assert.Null(manager.FindRecipe(398654));
     }
 
+    // Tests that the Dictionary prevents adding a recipe with a duplicate recipe ID.
     [Fact]
     public void CannotAddDuplicateRecipeId()
     {
@@ -92,6 +94,7 @@ public sealed class RecipeManagerTests
         Assert.Equal("Duplicate Recipe", manager.FindRecipe(398654)?.Title);
     }
 
+    //Tests that searching for a missing recipe ID returns null and does not remove any recipe.
     [Fact]
     public void MissingRecipeIdIsHandled()
     {
@@ -102,6 +105,7 @@ public sealed class RecipeManagerTests
         Assert.Equal(2, manager.RecipeCount);
     }
 
+    //Tests that ingredients are added to the List in the correct order and that the shopping list can be cleared.
     [Fact]
     public void ShoppingListCanAddGetAndClearIngredients()
     {
@@ -116,6 +120,7 @@ public sealed class RecipeManagerTests
         Assert.Equal(0, manager.ShoppingItemCount);
     }
 
+    //Tests that recipes can be added to the LinkedList, retrieved in order, and removed successfully.
     [Fact]
     public void CookingPlanCanAddGetAndRemoveRecipes()
     {
@@ -130,6 +135,7 @@ public sealed class RecipeManagerTests
         Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
     }
 
+    //Tests that the Cooking Plan prevents the same recipe from being added more than once.
     [Fact]
     public void CannotAddDuplicateRecipeToCookingPlan()
     {
@@ -141,6 +147,7 @@ public sealed class RecipeManagerTests
         Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
     }
 
+    //Tests the behaviour of the Stack when it is empty. Peek and Restore should return safe results without errors.
     [Fact]
     public void EmptyRemovedRecipeStackIsHandled()
     {
@@ -151,6 +158,7 @@ public sealed class RecipeManagerTests
         Assert.False(manager.RestoreLastRemovedRecipe());
     }
 
+    //Tests that the Queue processes cooking instructions in first-in-first-out (FIFO) order.
     [Fact]
     public void CookingInstructionsUseQueueInOrder()
     {
@@ -165,6 +173,7 @@ public sealed class RecipeManagerTests
         Assert.Equal(0, manager.PendingInstructionCount);
     }
 
+    //Tests the behaviour of an empty instruction Queue. Peek and Complete should return null when there are no instructions.
     [Fact]
     public void EmptyInstructionQueueIsHandled()
     {
@@ -175,6 +184,7 @@ public sealed class RecipeManagerTests
         Assert.Null(manager.CompleteNextInstruction());
     }
 
+    //Tests that removed recipes are stored in the Stack and restored in last-in-first-out (LIFO) order.
     [Fact]
     public void RemovedRecipesUseLastInFirstOut()
     {
@@ -193,6 +203,7 @@ public sealed class RecipeManagerTests
         Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
     }
 
+    //Tests that recipe instructions can be obtained from the recipe catalogue and loaded into the cooking Queue.
     [Fact]
     public void RecipeInstructionsCanBeLoadedFromCatalogue()
     {
