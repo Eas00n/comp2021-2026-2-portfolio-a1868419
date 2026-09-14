@@ -13,3 +13,11 @@ void DisplayScores(SortedSet<int> scores)
     Console.WriteLine($"Highest score: {scores.Max}");
     Console.WriteLine();
 }
+
+SortedSet<int> scores = new();
+Random rand = new();
+for (int i = 0; i < 10; i++)
+{
+    scores.Add(rand.Next(0, 101));
+}
+
