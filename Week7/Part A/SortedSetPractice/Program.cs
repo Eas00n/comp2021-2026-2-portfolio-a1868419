@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 
-void DisplayScores(SortedSet<int> scores)
-{
-    Console.WriteLine("Scores:");
-    foreach (int score in scores)
-    {
-        Console.WriteLine(score);
-    }
+// void DisplayScores(SortedSet<int> scores)
+// {
+//     Console.WriteLine("Scores:");
+//     foreach (int score in scores)
+//     {
+//         Console.WriteLine(score);
+//     }
 
-    Console.WriteLine($"Lowest score: {scores.Min}");
-    Console.WriteLine($"Highest score: {scores.Max}");
-    Console.WriteLine();
-}
+//     Console.WriteLine($"Lowest score: {scores.Min}");
+//     Console.WriteLine($"Highest score: {scores.Max}");
+//     Console.WriteLine();
+// }
 //Task1
 // SortedSet<int> scores = new();
 // Random rand = new();
@@ -84,3 +84,14 @@ sortedBankSet.Add(duplicateAccount);
 Console.WriteLine();
 Console.WriteLine("After Adding Duplicate Account:");
 DisplayAccounts(sortedBankSet);
+
+//Task3
+double[] dataY = sortedBankSet
+    .Select(account => (double)account.Balance)
+    .ToArray();
+
+ScottPlot.Plot myPlot = new();
+
+myPlot.Add.Bars(dataY);
+
+myPlot.SavePng("Topic7A-Task3.png", 800, 600);
