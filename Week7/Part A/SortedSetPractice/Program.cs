@@ -68,3 +68,11 @@ sortedBankSet.Add(account10);
 
 Console.WriteLine("Bank Accounts:");
 DisplayAccounts(sortedBankSet);
+
+BankAccount highAccount = new("High Account", 1000);
+
+sortedBankSet.Add(highAccount);
+
+Console.WriteLine();
+Console.WriteLine("After Adding High Account:");
+DisplayAccounts(sortedBankSet);
