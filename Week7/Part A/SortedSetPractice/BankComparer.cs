@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class BankComparer : IComparer<BankAccount>
 {
-    public int Compare(BankAccount x, BankAccount y)
+    public int Compare(BankAccount? x, BankAccount? y)
     {
         int result = x.Balance.CompareTo(y.Balance);
 
