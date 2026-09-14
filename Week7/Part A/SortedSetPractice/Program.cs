@@ -76,3 +76,11 @@ sortedBankSet.Add(highAccount);
 Console.WriteLine();
 Console.WriteLine("After Adding High Account:");
 DisplayAccounts(sortedBankSet);
+
+BankAccount duplicateAccount = new("Yuchen", 100);
+
+sortedBankSet.Add(duplicateAccount);
+
+Console.WriteLine();
+Console.WriteLine("After Adding Duplicate Account:");
+DisplayAccounts(sortedBankSet);
