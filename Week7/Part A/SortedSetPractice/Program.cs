@@ -32,7 +32,7 @@ void DisplayScores(SortedSet<int> scores)
 // Console.WriteLine("After adding duplicate High score:");
 // DisplayScores(scores);
 
-SortedSet<BankAccount> sortedBankSet = new();
+SortedSet<BankAccount> sortedBankSet = new SortedSet<BankAccount>(new BankComparer());
 
 BankAccount account1 = new("Yuchen", 100);
 BankAccount account2 = new("Jun", 250);
