@@ -65,3 +65,6 @@ sortedBankSet.Add(account7);
 sortedBankSet.Add(account8);
 sortedBankSet.Add(account9);
 sortedBankSet.Add(account10);
+
+Console.WriteLine("Bank Accounts:");
+DisplayAccounts(sortedBankSet);
