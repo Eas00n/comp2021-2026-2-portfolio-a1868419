@@ -92,10 +92,15 @@ double[] dataY = sortedBankSet
 
 ScottPlot.Plot myPlot = new();
 
+myPlot.Add.Bars(dataY);
+
+myPlot.Axes.Margins(bottom: 0, top: .2);
+
 myPlot.XLabel("Ranking");
 myPlot.YLabel("Account Balance");
 
-myPlot.Axes.Label.FontSize = 20;
+myPlot.Axes.Bottom.Label.FontSize = 20;
+myPlot.Axes.Left.Label.FontSize = 20;
 
 myPlot.Add.Bars(dataY);
 
