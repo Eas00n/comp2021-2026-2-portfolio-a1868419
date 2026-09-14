@@ -92,6 +92,11 @@ double[] dataY = sortedBankSet
 
 ScottPlot.Plot myPlot = new();
 
+myPlot.XLabel("Ranking");
+myPlot.YLabel("Account Balance");
+
+myPlot.Axes.Label.FontSize = 20;
+
 myPlot.Add.Bars(dataY);
 
 myPlot.SavePng("Topic7A-Task3.png", 800, 600);
