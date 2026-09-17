@@ -31,6 +31,21 @@ while (eventQueue2.Count != 0)
     Console.WriteLine(eventQueue2.Dequeue());
 }
 
+Console.WriteLine();
+Console.WriteLine("Testing Same Priority:");
+
+eventQueue2.Enqueue(
+    new Player("Melissa"),
+    Priority.HighPriority);
+
+eventQueue2.Enqueue(
+    new Player("Alex"),
+    Priority.HighPriority);
+
+while (eventQueue2.Count != 0)
+{
+    Console.WriteLine(eventQueue2.Dequeue());
+}
 
 // //Task 3
 // var eventQueue = new PriorityQueue<Player, int>();
