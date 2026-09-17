@@ -1,6 +1,23 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+//Task 3
+var eventQueue = new PriorityQueue<Player, int>();
+
+eventQueue.Enqueue(new Player("Yuchen"), 3);
+eventQueue.Enqueue(new Player("Jun"), 1);
+eventQueue.Enqueue(new Player("Anon"), 5);
+eventQueue.Enqueue(new Player("Shanice"), 2);
+eventQueue.Enqueue(new Player("Mark"), 4);
+
+Console.WriteLine("Processing Players:");
+
+while (eventQueue.Count != 0)
+{
+    Console.WriteLine(eventQueue.Dequeue());
+}
+
+//Task 2
 var sortedScores2 = new SortedDictionary<ScoreEntry, Player>(new ScoreComparer());
 
 // Create 10 players
@@ -96,7 +113,7 @@ sortedScores2.Add(
 
 Console.WriteLine(
     $"{players[0].Name} - Score: 2000 - Stage: 12");
-    
+
 //Task1
 // var sortedScores = new SortedDictionary<int, string>();
 
