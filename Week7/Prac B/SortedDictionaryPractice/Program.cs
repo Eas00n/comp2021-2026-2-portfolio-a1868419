@@ -4,6 +4,32 @@ using System.Linq;
 //Task 4
 var eventQueue2 = new PriorityQueue<Player, Priority>();
 
+eventQueue2.Enqueue(
+    new Player("Yuchen"),
+    Priority.MediumPriority);
+
+eventQueue2.Enqueue(
+    new Player("Jun"),
+    Priority.HighPriority);
+
+eventQueue2.Enqueue(
+    new Player("Anon"),
+    Priority.LowPriority);
+
+eventQueue2.Enqueue(
+    new Player("Shanice"),
+    Priority.HighPriority);
+
+eventQueue2.Enqueue(
+    new Player("Mark"),
+    Priority.MediumPriority);
+
+Console.WriteLine("Processing Players:");
+
+while (eventQueue2.Count != 0)
+{
+    Console.WriteLine(eventQueue2.Dequeue());
+}
 
 
 // //Task 3
