@@ -38,6 +38,13 @@ for (int i = 0; i < players.Count; i++)
     sortedScores2.Add(scores[i], players[i]);
 }
 
+Console.WriteLine("Top 3 Scores:");
+
+foreach (var item in sortedScores2.Reverse().Take(3))
+{
+    Console.WriteLine(
+        $"{item.Value.Name} - Score: {item.Key.Score}");
+}
 
 //Task1
 // var sortedScores = new SortedDictionary<int, string>();
