@@ -1,6 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+var sortedScores2 = new SortedDictionary<ScoreEntry, Player>();
+
+var score = new ScoreEntry(1000, 5);
+var player = new Player("Yuchen");
+
+sortedScores2.Add(score, player);
+
 var sortedScores = new SortedDictionary<int, string>();
 
 sortedScores.Add(1200, "Yuchen");
