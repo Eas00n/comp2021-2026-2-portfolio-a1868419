@@ -33,6 +33,11 @@ var scores = new List<ScoreEntry>
     new(900, 4)
 };
 
+for (int i = 0; i < players.Count; i++)
+{
+    sortedScores2.Add(scores[i], players[i]);
+}
+
 
 //Task1
 // var sortedScores = new SortedDictionary<int, string>();
