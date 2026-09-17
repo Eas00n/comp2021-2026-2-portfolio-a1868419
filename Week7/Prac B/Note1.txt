@@ -1,0 +1,10 @@
+1.SortedDictionary is backed by a balanced binary search tree (Red-Black Tree).
+  I found this by checking the Microsoft documentation.
+
+2.An exception was thrown.
+  This happened because the score is the key in the SortedDictionary and keys must be unique.
+
+3.SortedSet stores only values and keeps them sorted.
+  SortedDictionary stores key-value pairs and keeps them sorted by key.
+  A SortedSet could be used for a leaderboard containing unique scores.
+  A SortedDictionary could be used for player rankings where each score is linked to a player name.
