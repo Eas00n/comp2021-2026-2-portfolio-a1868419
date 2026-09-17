@@ -56,4 +56,12 @@
     <Project Path="Week6/Prac B/LinqBankAccounts/LinqBankAccounts.csproj" />
     <Project Path="Week6/Prac B/LinqPractice/LinqPractice.csproj" />
   </Folder>
+  
+  <Folder Name="/Week7/" />
+  <Folder Name="/Week7/Part A/">
+    <Project Path="Week7/Part A/SortedSetPractice/SortedSetPractice.csproj" />
+  </Folder>
+  <Folder Name="/Week7/Prac B/">
+    <Project Path="Week7/Prac B/SortedDictionaryPractice/SortedDictionaryPractice.csproj" />
+  </Folder>
 </Solution>

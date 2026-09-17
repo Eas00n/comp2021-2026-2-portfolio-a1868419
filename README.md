@@ -18,6 +18,7 @@ SDP
 ├── Week4
 ├── Week5
 ├── Week6
+├── Week7
 └── README.md
 ```
 
@@ -100,6 +101,21 @@ SDP
 - Continued using GitHub as part of the development workflow
 
 ---
+## Topic 7 – Trees and Heaps
+
+### Description
+
+- Worked with SortedSet<T>
+- Worked with SortedDictionary<TKey, TValue>
+- Used custom IComparer implementations
+- Compared values and keys in sorted collections
+- Used PriorityQueue<TElement, TPriority>
+- Learned how heaps are used by PriorityQueue
+- Used enum values as priorities
+- Tested duplicate values and equal priorities
+- Used ScottPlot to visualise sorted account data
+
+---
 
 ## Running Projects
 
@@ -142,3 +158,6 @@ Learned arrays, lists, linked lists and collection management.
 
 ### Week 6
 Practised different C# collections, including dictionaries, stacks and queues. Improved unit testing skills and continued using Git to record development progress.
+
+### Week 7
+Learned about trees, heaps, SortedSet, SortedDictionary and PriorityQueue. Practised custom comparers, sorted collections and priority scheduling. Also created a data visualisation using ScottPlot.
