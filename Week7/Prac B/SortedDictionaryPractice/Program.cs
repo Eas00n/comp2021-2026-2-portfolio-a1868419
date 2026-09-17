@@ -75,6 +75,17 @@ foreach (var item in sortedScores2)
         $"{item.Value.Name} - Score: {item.Key.Score}");
 }
 
+Console.WriteLine();
+
+Console.WriteLine("Adding same Score with different StageReached:");
+
+sortedScores2.Add(
+    new ScoreEntry(1000, 10),
+    new Player("NewPlayer"));
+
+Console.WriteLine(
+    $"NewPlayer - Score: 1000 - Stage: 10");
+
 //Task1
 // var sortedScores = new SortedDictionary<int, string>();
 
