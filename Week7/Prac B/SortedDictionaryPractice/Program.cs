@@ -17,6 +17,17 @@ while (eventQueue.Count != 0)
     Console.WriteLine(eventQueue.Dequeue());
 }
 
+Console.WriteLine();
+Console.WriteLine("Testing Same Priority:");
+
+eventQueue.Enqueue(new Player("Melissa"), 2);
+eventQueue.Enqueue(new Player("Alex"), 2);
+
+while (eventQueue.Count != 0)
+{
+    Console.WriteLine(eventQueue.Dequeue());
+}
+
 //Task 2
 var sortedScores2 = new SortedDictionary<ScoreEntry, Player>(new ScoreComparer());
 
