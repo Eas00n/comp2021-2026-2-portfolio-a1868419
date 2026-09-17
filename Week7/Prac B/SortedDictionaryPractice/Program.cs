@@ -56,6 +56,15 @@ foreach (var item in sortedScores2.Take(3))
         $"{item.Value.Name} - Score: {item.Key.Score}");
 }
 
+Console.WriteLine();
+
+Console.WriteLine("Removing Melissa");
+
+var melissa = sortedScores2.First(
+    item => item.Value.Name == "Melissa");
+
+sortedScores2.Remove(melissa.Key);
+
 //Task1
 // var sortedScores = new SortedDictionary<int, string>();
 
