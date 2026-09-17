@@ -36,3 +36,9 @@ int scoreToRemove = sortedScores.First(x => x.Value == "Melissa").Key;
 sortedScores.Remove(scoreToRemove);
 
 Console.WriteLine();
+
+Console.WriteLine("Remaining Players:");
+foreach (var player in sortedScores)
+{
+    Console.WriteLine($"{player.Value}: {player.Key}");
+}
