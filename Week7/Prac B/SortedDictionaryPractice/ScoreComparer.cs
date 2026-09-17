@@ -1,19 +1,3 @@
-var sortedScores2 = new SortedDictionary<ScoreEntry, Player>(new ScoreComparer());
-
-var players = new List<Player>
-{
-    new("Yuchen"),
-    new("Jun"),
-    new("Anon"),
-    new("Shanice"),
-    new("Ecclesiasticalot"),
-    new("Mark"),
-    new("Annalie"),
-    new("Melissa"),
-    new("Askey"),
-    new("Alex")
-};
-
 public class ScoreComparer : IComparer<ScoreEntry>
 {
     public int Compare(ScoreEntry? x, ScoreEntry? y)
