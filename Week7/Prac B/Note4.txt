@@ -1,0 +1,5 @@
+1.Enum values have a built-in order in C#.
+  PriorityQueue can compare the enum values directly, so we do not need IComparer or IComparable.
+
+2.Yes, we would need IComparer or IComparable.
+  A struct with an int Priority property does not automatically define the priority order. We need to tell PriorityQueue how to compare the priorities.
