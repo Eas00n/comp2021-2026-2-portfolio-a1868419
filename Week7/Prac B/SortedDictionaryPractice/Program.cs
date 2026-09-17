@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
-var sortedDictionary = new SortedDictionary<int, string>();
+var sortedScores = new SortedDictionary<int, string>();
 
 sortedScores.Add(1200, "Yuchen");
 sortedScores.Add(950, "Jun");
