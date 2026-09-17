@@ -53,3 +53,8 @@ Console.WriteLine();
 Console.WriteLine("Testing Duplicate Name:");
 
 sortedScores.Add(1600, "Yuchen");
+
+foreach (var player in sortedScores)
+{
+    Console.WriteLine($"{player.Value}: {player.Key}");
+}
