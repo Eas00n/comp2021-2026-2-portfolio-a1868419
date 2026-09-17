@@ -12,3 +12,10 @@ sortedScores.Add(700, "Annalie");
 sortedScores.Add(1000, "Melissa");
 sortedScores.Add(1400, "Askey");
 sortedScores.Add(900, "Alex");
+
+Consile.WriteLine("Top 3 Scores:");
+
+foreach (var player in sortedScores.Reverse().Take(3))
+{
+    Console.WriteLine($"{player.Value}: {player.Key}");
+}
