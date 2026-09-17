@@ -1,129 +1,134 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-//Task 3
-var eventQueue = new PriorityQueue<Player, int>();
+//Task 4
+var eventQueue2 = new PriorityQueue<Player, Priority>();
 
-eventQueue.Enqueue(new Player("Yuchen"), 3);
-eventQueue.Enqueue(new Player("Jun"), 1);
-eventQueue.Enqueue(new Player("Anon"), 5);
-eventQueue.Enqueue(new Player("Shanice"), 2);
-eventQueue.Enqueue(new Player("Mark"), 4);
 
-Console.WriteLine("Processing Players:");
 
-while (eventQueue.Count != 0)
-{
-    Console.WriteLine(eventQueue.Dequeue());
-}
+// //Task 3
+// var eventQueue = new PriorityQueue<Player, int>();
 
-Console.WriteLine();
-Console.WriteLine("Testing Same Priority:");
+// eventQueue.Enqueue(new Player("Yuchen"), 3);
+// eventQueue.Enqueue(new Player("Jun"), 1);
+// eventQueue.Enqueue(new Player("Anon"), 5);
+// eventQueue.Enqueue(new Player("Shanice"), 2);
+// eventQueue.Enqueue(new Player("Mark"), 4);
 
-eventQueue.Enqueue(new Player("Melissa"), 2);
-eventQueue.Enqueue(new Player("Alex"), 2);
+// Console.WriteLine("Processing Players:");
 
-while (eventQueue.Count != 0)
-{
-    Console.WriteLine(eventQueue.Dequeue());
-}
+// while (eventQueue.Count != 0)
+// {
+//     Console.WriteLine(eventQueue.Dequeue());
+// }
 
-//Task 2
-var sortedScores2 = new SortedDictionary<ScoreEntry, Player>(new ScoreComparer());
+// Console.WriteLine();
+// Console.WriteLine("Testing Same Priority:");
 
-// Create 10 players
-var players = new List<Player>
-{
-    new("Yuchen"),
-    new("Jun"),
-    new("Anon"),
-    new("Shanice"),
-    new("Ecclesiasticalot"),
-    new("Mark"),
-    new("Annalie"),
-    new("Melissa"),
-    new("Askey"),
-    new("Alex")
-};
+// eventQueue.Enqueue(new Player("Melissa"), 2);
+// eventQueue.Enqueue(new Player("Alex"), 2);
 
-// Create 10 ScoreEntry objects
-var scores = new List<ScoreEntry>
-{
-    new(1000, 5),
-    new(800, 4),
-    new(1500, 8),
-    new(600, 3),
-    new(1200, 6),
-    new(1300, 7),
-    new(500, 2),
-    new(1100, 5),
-    new(1400, 7),
-    new(900, 4)
-};
+// while (eventQueue.Count != 0)
+// {
+//     Console.WriteLine(eventQueue.Dequeue());
+// }
 
-for (int i = 0; i < players.Count; i++)
-{
-    sortedScores2.Add(scores[i], players[i]);
-}
+// //Task 2
+// var sortedScores2 = new SortedDictionary<ScoreEntry, Player>(new ScoreComparer());
 
-Console.WriteLine("Top 3 Scores:");
+// // Create 10 players
+// var players = new List<Player>
+// {
+//     new("Yuchen"),
+//     new("Jun"),
+//     new("Anon"),
+//     new("Shanice"),
+//     new("Ecclesiasticalot"),
+//     new("Mark"),
+//     new("Annalie"),
+//     new("Melissa"),
+//     new("Askey"),
+//     new("Alex")
+// };
 
-foreach (var item in sortedScores2.Reverse().Take(3))
-{
-    Console.WriteLine(
-        $"{item.Value.Name} - Score: {item.Key.Score}");
-}
+// // Create 10 ScoreEntry objects
+// var scores = new List<ScoreEntry>
+// {
+//     new(1000, 5),
+//     new(800, 4),
+//     new(1500, 8),
+//     new(600, 3),
+//     new(1200, 6),
+//     new(1300, 7),
+//     new(500, 2),
+//     new(1100, 5),
+//     new(1400, 7),
+//     new(900, 4)
+// };
 
-Console.WriteLine();
+// for (int i = 0; i < players.Count; i++)
+// {
+//     sortedScores2.Add(scores[i], players[i]);
+// }
 
-Console.WriteLine("Bottom 3 Scores:");
+// Console.WriteLine("Top 3 Scores:");
 
-foreach (var item in sortedScores2.Take(3))
-{
-    Console.WriteLine(
-        $"{item.Value.Name} - Score: {item.Key.Score}");
-}
+// foreach (var item in sortedScores2.Reverse().Take(3))
+// {
+//     Console.WriteLine(
+//         $"{item.Value.Name} - Score: {item.Key.Score}");
+// }
 
-Console.WriteLine();
+// Console.WriteLine();
 
-Console.WriteLine("Removing Melissa");
+// Console.WriteLine("Bottom 3 Scores:");
 
-var melissa = sortedScores2.First(
-    item => item.Value.Name == "Melissa");
+// foreach (var item in sortedScores2.Take(3))
+// {
+//     Console.WriteLine(
+//         $"{item.Value.Name} - Score: {item.Key.Score}");
+// }
 
-sortedScores2.Remove(melissa.Key);
+// Console.WriteLine();
 
-Console.WriteLine();
+// Console.WriteLine("Removing Melissa");
 
-Console.WriteLine("Remaining Players:");
+// var melissa = sortedScores2.First(
+//     item => item.Value.Name == "Melissa");
 
-foreach (var item in sortedScores2)
-{
-    Console.WriteLine(
-        $"{item.Value.Name} - Score: {item.Key.Score}");
-}
+// sortedScores2.Remove(melissa.Key);
 
-Console.WriteLine();
+// Console.WriteLine();
 
-Console.WriteLine("Adding same Score with different StageReached:");
+// Console.WriteLine("Remaining Players:");
 
-sortedScores2.Add(
-    new ScoreEntry(1000, 10),
-    new Player("NewPlayer"));
+// foreach (var item in sortedScores2)
+// {
+//     Console.WriteLine(
+//         $"{item.Value.Name} - Score: {item.Key.Score}");
+// }
 
-Console.WriteLine(
-    $"NewPlayer - Score: 1000 - Stage: 10");
+// Console.WriteLine();
 
-Console.WriteLine();
+// Console.WriteLine("Adding same Score with different StageReached:");
 
-Console.WriteLine("Adding different Score with same Player:");
+// sortedScores2.Add(
+//     new ScoreEntry(1000, 10),
+//     new Player("NewPlayer"));
 
-sortedScores2.Add(
-    new ScoreEntry(2000, 12),
-    players[0]);
+// Console.WriteLine(
+//     $"NewPlayer - Score: 1000 - Stage: 10");
 
-Console.WriteLine(
-    $"{players[0].Name} - Score: 2000 - Stage: 12");
+// Console.WriteLine();
+
+// Console.WriteLine("Adding different Score with same Player:");
+
+// sortedScores2.Add(
+//     new ScoreEntry(2000, 12),
+//     players[0]);
+
+// Console.WriteLine(
+//     $"{players[0].Name} - Score: 2000 - Stage: 12");
 
 //Task1
 // var sortedScores = new SortedDictionary<int, string>();
