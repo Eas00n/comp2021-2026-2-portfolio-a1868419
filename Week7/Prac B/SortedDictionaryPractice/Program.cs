@@ -46,6 +46,16 @@ foreach (var item in sortedScores2.Reverse().Take(3))
         $"{item.Value.Name} - Score: {item.Key.Score}");
 }
 
+Console.WriteLine();
+
+Console.WriteLine("Bottom 3 Scores:");
+
+foreach (var item in sortedScores2.Take(3))
+{
+    Console.WriteLine(
+        $"{item.Value.Name} - Score: {item.Key.Score}");
+}
+
 //Task1
 // var sortedScores = new SortedDictionary<int, string>();
 
