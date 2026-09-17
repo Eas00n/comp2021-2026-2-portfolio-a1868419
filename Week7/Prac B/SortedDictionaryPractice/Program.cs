@@ -29,3 +29,10 @@ foreach (var player in sortedScores.Take(3))
 }
 
 Console.WriteLine();
+
+Console.WriteLine("Removing Player Melissa:");
+int scoreToRemove = sortedScores.First(x => x.Value == "Melissa").Key;
+
+sortedScores.Remove(scoreToRemove);
+
+Console.WriteLine();
