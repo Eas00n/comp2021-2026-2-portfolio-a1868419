@@ -86,6 +86,17 @@ sortedScores2.Add(
 Console.WriteLine(
     $"NewPlayer - Score: 1000 - Stage: 10");
 
+Console.WriteLine();
+
+Console.WriteLine("Adding different Score with same Player:");
+
+sortedScores2.Add(
+    new ScoreEntry(2000, 12),
+    players[0]);
+
+Console.WriteLine(
+    $"{players[0].Name} - Score: 2000 - Stage: 12");
+    
 //Task1
 // var sortedScores = new SortedDictionary<int, string>();
 
