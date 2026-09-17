@@ -65,6 +65,16 @@ var melissa = sortedScores2.First(
 
 sortedScores2.Remove(melissa.Key);
 
+Console.WriteLine();
+
+Console.WriteLine("Remaining Players:");
+
+foreach (var item in sortedScores2)
+{
+    Console.WriteLine(
+        $"{item.Value.Name} - Score: {item.Key.Score}");
+}
+
 //Task1
 // var sortedScores = new SortedDictionary<int, string>();
 
