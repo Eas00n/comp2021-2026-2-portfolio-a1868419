@@ -1,0 +1,8 @@
+1.A PriorityQueue is backed by a heap.
+  I found this in the Microsoft documentation.
+
+2.Both players can be added to the PriorityQueue.
+  They have the same priority, but the order between them is not guaranteed.
+
+3.A PriorityQueue allows multiple items with the same priority.
+  A SortedSet only stores unique elements, so it does not allow duplicate elements.
