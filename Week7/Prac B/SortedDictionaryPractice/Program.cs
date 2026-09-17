@@ -18,6 +18,23 @@ var players = new List<Player>
     new("Alex")
 };
 
+// Create 10 ScoreEntry objects
+var scores = new List<ScoreEntry>
+{
+    new(1000, 5),
+    new(800, 4),
+    new(1500, 8),
+    new(600, 3),
+    new(1200, 6),
+    new(1300, 7),
+    new(500, 2),
+    new(1100, 5),
+    new(1400, 7),
+    new(900, 4)
+};
+
+
+//Task1
 // var sortedScores = new SortedDictionary<int, string>();
 
 // sortedScores.Add(1200, "Yuchen");
