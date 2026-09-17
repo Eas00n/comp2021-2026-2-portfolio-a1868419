@@ -43,3 +43,8 @@ foreach (var player in sortedScores)
 {
     Console.WriteLine($"{player.Value}: {player.Key}");
 }
+
+Console.WriteLine();
+Console.WriteLine("Testing Duplicate Score:");
+
+sortedScores.Add(1200, "NewPlayer");
