@@ -19,8 +19,19 @@ public class ComplexityBenchmark
             }
             aStopwatch.Stop();
 
+            // Method B: Append using StringBuilder
+            StringBuilder bOutput = new StringBuilder();
+            Stopwatch bStopwatch = Stopwatch.StartNew();
+            bStopwatch.Start();
+            for (int i = 0; i < size; i++)
+            {
+                bOutput.Append("z");
+            }
+            bStopwatch.Stop();
+
             Console.WriteLine($"Loop size: {size:N0}");
             Console.WriteLine($"String Append: {aStopwatch.Elapsed.TotalSeconds:F4} seconds");
+            Console.WriteLine($"StringBuilder Append: {bStopwatch.Elapsed.TotalSeconds:F4} seconds");
         }
     }
 }
