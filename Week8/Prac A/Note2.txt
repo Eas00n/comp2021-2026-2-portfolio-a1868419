@@ -1,0 +1,4 @@
+1. StringBuilder was faster than string Append in all three tests. It took much less time to append 100,000 characters.
+
+2. A string is immutable in C#. This means its value cannot be changed after it is created. Using += creates new strings and copies the existing characters repeatedly. This becomes slower when the loop size increases.
+   StringBuilder can reuse its internal buffer to append characters. Therefore, it is usually more efficient when building a large string.
