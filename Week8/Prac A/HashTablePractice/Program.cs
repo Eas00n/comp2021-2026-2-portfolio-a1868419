@@ -37,11 +37,11 @@ Console.WriteLine($"Number of entries after duplicate test: {scoreHash.Count}");
 // Get names of players and their scores
 Console.WriteLine("\nPlayers sorted by score(highest to lowest):");
 
-var sortedScores = scoreHash.Cast<DictionaryEntry>().Where(entry => entry.Key is Player).OrderByDescending(entry => (int)entry.Value);
+var sortedScores = scoreHash.Cast<DictionaryEntry>().Where(entry => entry.Key is Player).OrderByDescending(entry => (int)entry.Value!);
 
 foreach (DictionaryEntry entry in sortedScores)
 {
     Player player = (Player)entry.Key;
-    int score = (int)entry.Value;
+    int score = (int)entry.Value!;
     Console.WriteLine($"{player.Name}: {score}");
 }

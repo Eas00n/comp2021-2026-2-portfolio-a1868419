@@ -1,0 +1,5 @@
+1. The String key was added successfully. A Hashtable stores keys and values as objects, so it does not check that every key is a Player object at compile time.
+
+2. An ArgumentException was thrown because the key already existed. The try-catch block caught the exception, so the program continued running. The number of entries remained 6.
+
+3. Yes, I used LINQ methods to sort the scores. However, Hashtable is a non-generic collection. I used Cast<DictionaryEntry>() to convert its entries so I could use LINQ methods such as Where() and OrderByDescending(). I also needed to cast the key and value to their expected types.
