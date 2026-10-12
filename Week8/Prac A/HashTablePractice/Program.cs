@@ -17,3 +17,7 @@ scoreHash.Add(player5, 99);
 
 Console.WriteLine("Five players have been added.");
 Console.WriteLine($"Number of entries: {scoreHash.Count}");
+
+// Test code
+scoreHash.Add("Test Player", 70);
+Console.WriteLine($"Number of entries after test: {scoreHash.Count}");
