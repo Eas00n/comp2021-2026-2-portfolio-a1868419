@@ -45,3 +45,5 @@ foreach (DictionaryEntry entry in sortedScores)
     int score = (int)entry.Value!;
     Console.WriteLine($"{player.Name}: {score}");
 }
+
+ComplexityBenchmark.Run();

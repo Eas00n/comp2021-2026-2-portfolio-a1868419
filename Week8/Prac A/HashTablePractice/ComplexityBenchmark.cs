@@ -18,6 +18,9 @@ public class ComplexityBenchmark
                 aOutput += "z";
             }
             aStopwatch.Stop();
+
+            Console.WriteLine($"Loop size: {size:N0}");
+            Console.WriteLine($"String Append: {aStopwatch.Elapsed.TotalSeconds:F4} seconds");
         }
     }
 }
