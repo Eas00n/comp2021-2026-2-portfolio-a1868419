@@ -47,3 +47,5 @@ foreach (DictionaryEntry entry in sortedScores)
 }
 
 ComplexityBenchmark.Run();
+
+Task3Graphing.Run();

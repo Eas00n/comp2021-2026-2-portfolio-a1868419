@@ -1,0 +1,7 @@
+1. The time complexity of repeated string Append using += is O(n²).
+
+2. My graph shows that the running time increases quickly as the number of characters increases. For example, Pass 10 took about 1.02 seconds, while Pass 20 took about 3.81 seconds. This shows that string Append becomes slower as the string gets larger.
+
+3. The time complexity of repeated StringBuilder.Append() is O(n) on average, where n is the number of characters added.
+
+4. My graph shows that StringBuilder is much faster than string Append. Pass 20 took only about 0.0004 seconds with StringBuilder, compared with about 3.81 seconds with string Append. This supports the conclusion that StringBuilder is more efficient for adding many characters.
