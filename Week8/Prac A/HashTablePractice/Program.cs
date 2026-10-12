@@ -18,6 +18,18 @@ scoreHash.Add(player5, 99);
 Console.WriteLine("Five players have been added.");
 Console.WriteLine($"Number of entries: {scoreHash.Count}");
 
-// Test code
+// Test add code
 scoreHash.Add("Test Player", 70);
 Console.WriteLine($"Number of entries after test: {scoreHash.Count}");
+
+// Test adding a duplicate key
+try
+{
+    scoreHash.Add(player1, 100);
+}
+catch (ArgumentException)
+{
+    Console.WriteLine("Duplicate key is not allowed.");
+}
+
+Console.WriteLine($"Number of entries after duplicate test: {scoreHash.Count}");
