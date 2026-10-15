@@ -100,6 +100,37 @@ using (Process process = Process.GetCurrentProcess())
 }
 Console.WriteLine("Loaded List players: " + loadedBenchmarkList.Count);
 
+//LinkedList memory
+//Create a LinkedList with 10,000 players
+LinkedList<Player> benchmarkLinkedList = new LinkedList<Player>();
+
+for (int i = 0; i < 10_000; i++)
+{
+    benchmarkLinkedList.AddLast(new Player("Player " + i));
+}
+
+//Save the LinkedList to a JSON file
+string linkedListPath = "./BenchmarkLinkedList.json";
+FileWriter(linkedListPath, benchmarkLinkedList);
+
+//Load the LinkedList from the JSON file
+LinkedList<Player> loadedBenchmarkLinkedList = FileReader<LinkedList<Player>>(linkedListPath);
+
+//Collect garbage before checking memory
+GC.Collect();
+
+long linkedListHeapSize = GC.GetGCMemoryInfo().HeapSizeBytes;
+Console.WriteLine("\nLinkedList HeapSizeBytes: " + linkedListHeapSize + " bytes");
+
+//Check peak working set memory
+using (Process process = Process.GetCurrentProcess())
+{
+    long linkedListPeakWorkingSet64 = process.PeakWorkingSet64;
+    Console.WriteLine("LinkedList PeakWorkingSet64: " + linkedListPeakWorkingSet64 + " bytes");
+}
+
+Console.WriteLine("Loaded LinkedList players: " + loadedBenchmarkLinkedList.Count);
+
 //Task 3
 static void FileWriter<T>(string path, T objectToWrite) where T : class
 {
