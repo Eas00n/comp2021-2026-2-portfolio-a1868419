@@ -5,7 +5,7 @@ string path = @"./MyTest.txt";
 using (StreamWriter sw = File.CreateText(path))
 {
     sw.WriteLine("Hello, World!");
-    sw.WriteLine("This is a test file.");
+    sw.WriteLine("The old content should be replaced.");
 }
 Console.WriteLine("File created and text written successfully.");
 
