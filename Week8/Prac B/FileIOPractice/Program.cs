@@ -72,6 +72,27 @@ using (Process process = Process.GetCurrentProcess())
     Console.WriteLine("PeakWorkingSet64: " + peakWorkingSet64 + " bytes");
 }
 
+//Task 5
+//Create a List with 10,000 players
+List<Player> benchmarkList = new List<Player>();
+for (int i = 0; i < 10000; i++)
+{
+    benchmarkList.Add(new Player("Player " + i));
+}
+
+//Save the List to a JSON file
+string listPath = "./BenchmarkPlayers.json";
+FileWriter(listPath, benchmarkList);
+
+//Load the List from the JSON file
+List<Player> loadedBenchmarkList = FileReader<List<Player>>(listPath);
+
+//Collect garbage before checking memory
+GC.Collect();
+long listHeapSize = GC.GetGCMemoryInfo().HeapSizeBytes;
+Console.WriteLine("\nList HeapSizeBytes: " + listHeapSize + " bytes");
+
+
 //Task 3
 static void FileWriter<T>(string path, T objectToWrite) where T : class
 {

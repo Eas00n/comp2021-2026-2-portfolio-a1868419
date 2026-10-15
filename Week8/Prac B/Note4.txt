@@ -1,0 +1,7 @@
+1. The Garbage Collector (GC) automatically frees memory used by objects that are no longer needed. This helps manage memory in C#.
+
+2. The .NET runtime manages the managed heap and tracks its size. The GC can get this information from the runtime.
+
+3. GC.Collect() requests the Garbage Collector to collect objects that are no longer being used. It does not guarantee that all memory will be released immediately.
+
+4. Yes, they were different. HeapSizeBytes measures the size of the managed heap, while PeakWorkingSet64 measures the highest working set memory used by the process. The working set can also include memory used by the .NET runtime and other parts of the program.
