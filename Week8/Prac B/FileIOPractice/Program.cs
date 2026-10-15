@@ -50,8 +50,27 @@ foreach (Player player in loadedPlayers)
 
 //Task 4
 //Create a LinkedList of players
-LinkedList<Player> LinkedList = new LinkedList<Player>(players);
+LinkedList<Player> linkedPlayers = new LinkedList<Player>(players);
 
+//Save the LinkedList to a JSON file
+string linkedListJsonPath = "./LinkedListPlayers.json";
+FileWriter(linkedListJsonPath, linkedPlayers);
+Console.WriteLine("\nLinkedList JSON file saved successfully.");
+
+//Load the LinkedList from the JSON file
+LinkedList<Player> loadedLinkedList = FileReader<LinkedList<Player>>(linkedListJsonPath);
+Console.WriteLine("LinkedList loaded successfully.");
+Console.WriteLine("Number of loaded players: " + loadedLinkedList.Count);
+
+//Collect garbage before checking the managed heap
+GC.Collect();
+long heapSizeBytes = GC.GetGCMemoryInfo().HeapSizeBytes;
+Console.WriteLine("HeapSizeBytes: " + heapSizeBytes + " bytes");
+using (Process process = Process.GetCurrentProcess())
+{
+    long peakWorkingSet64 = process.PeakWorkingSet64;
+    Console.WriteLine("PeakWorkingSet64: " + peakWorkingSet64 + " bytes");
+}
 
 //Task 3
 static void FileWriter<T>(string path, T objectToWrite) where T : class
