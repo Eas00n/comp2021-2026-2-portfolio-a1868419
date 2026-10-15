@@ -45,3 +45,16 @@ jsonString = File.ReadAllText(jsonPath);
 
 //Convert the JSON back to a list of players
 List<Player> loadedPlayers = JsonSerializer.Deserialize<List<Player>>(jsonString)!;
+
+//Task 3
+static void FileWriter<T>(string path, T objectToWrite) where T : class
+{
+    string jsonString = JsonSerializer.Serialize(objectToWrite);
+    File.WriteAllText(path, jsonString);
+}
+
+static T FileReader<T>(string path) where T : class
+{
+    string jsonString = File.ReadAllText(path);
+    return JsonSerializer.Deserialize<T>(jsonString)!;
+}
