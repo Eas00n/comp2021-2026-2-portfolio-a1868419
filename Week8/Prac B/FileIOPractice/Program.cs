@@ -32,3 +32,8 @@ foreach (Player player in players)
 }
 //Convert the list to JSON
 string jsonString = JsonSerializer.Serialize(players);
+
+//Save the JSON to a file
+string path = "./Players.json";
+File.WriteAllText(path, jsonString);
+Console.WriteLine("\nJSON file saved successfully.");
