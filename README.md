@@ -19,6 +19,7 @@ SDP
 ├── Week5
 ├── Week6
 ├── Week7
+├──Week8
 └── README.md
 ```
 
@@ -116,6 +117,22 @@ SDP
 - Used ScottPlot to visualise sorted account data
 
 ---
+## Topic 8 – Hash Tables and Algorithm Complexity
+
+### Description
+
+- Used Hashtable to store players and their scores
+- Added and retrieved key-value pairs
+- Tested string keys and duplicate keys
+- Used exception handling for duplicate keys
+- Sorted players by score using LINQ
+- Compared string concatenation using += with StringBuilder.Append()
+- Used Stopwatch to measure execution time
+- Learned about Big-O time complexity
+- Used ScottPlot to create performance graphs
+- Compared the performance of different string-building methods
+
+---
 
 ## Running Projects
 
@@ -161,3 +178,7 @@ Practised different C# collections, including dictionaries, stacks and queues. I
 
 ### Week 7
 Learned about trees, heaps, SortedSet, SortedDictionary and PriorityQueue. Practised custom comparers, sorted collections and priority scheduling. Also created a data visualisation using ScottPlot.
+
+### Week 8
+
+Learned about hash tables and key-value storage. Practised adding, retrieving and sorting data. Tested duplicate keys and exception handling. Compared string concatenation with StringBuilder using Stopwatch. Learned about Big-O complexity and used ScottPlot to create performance graphs.
