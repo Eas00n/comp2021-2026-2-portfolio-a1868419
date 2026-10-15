@@ -1,0 +1,3 @@
+1. The ! symbol tells the compiler that the result is not null. It removes the nullable warning. However, it does not prevent a null value at runtime.
+
+2. The JSON serializer may not be able to access the properties as expected. The JSON file may not contain all the required data. Public properties allow the serializer to read and write the player's data.

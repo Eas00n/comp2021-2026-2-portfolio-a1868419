@@ -1,0 +1,7 @@
+1. If I use File.CreateText(), the existing file is overwritten. The old content is replaced by the new content.
+
+2. The @ symbol creates a verbatim string in C#. It treats backslashes as normal characters. This is useful for file paths, such as @"D:\SDP\Week8".
+
+3. Using using is recommended because it automatically closes the reader or writer and releases file resources. Without it, the file may remain open until it is closed manually or cleaned up later.
+
+4. StreamReader can read a file line by line, which is useful for large files. File.ReadAllText() reads the entire file into one string, which is simpler for small text files.
