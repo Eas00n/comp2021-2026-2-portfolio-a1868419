@@ -1,0 +1,1 @@
+where T : class，means that T must be a reference type, such as a class or a list. It prevents us from using value types like `int` for T. This allows the generic methods to work with objects.

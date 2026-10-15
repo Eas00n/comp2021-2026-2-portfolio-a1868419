@@ -2,6 +2,7 @@
 using System.IO;
 using System.Text.Json;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 string path = @"./MyTest.txt";
 using (StreamWriter sw = File.CreateText(path))
@@ -46,6 +47,10 @@ foreach (Player player in loadedPlayers)
 {
     Console.WriteLine(player);
 }
+
+//Task 4
+//Create a LinkedList of players
+LinkedList<Player> LinkedList = new LinkedList<Player>(players);
 
 
 //Task 3
