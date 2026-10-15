@@ -11,11 +11,5 @@ Console.WriteLine("File created and text written successfully.");
 
 
 //Read the file
-using (StreamReader sr = File.OpenText(path))
-{
-    string s;
-    while ((s = sr.ReadLine()) != null)
-    {
-        Console.WriteLine(s);
-    }
-}
+string content = File.ReadAllText(path);
+Console.WriteLine(content);
