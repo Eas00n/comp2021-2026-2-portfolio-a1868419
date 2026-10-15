@@ -92,6 +92,13 @@ GC.Collect();
 long listHeapSize = GC.GetGCMemoryInfo().HeapSizeBytes;
 Console.WriteLine("\nList HeapSizeBytes: " + listHeapSize + " bytes");
 
+//Check peak working set memory
+using (Process process = Process.GetCurrentProcess())
+{
+    long listPeakWorkingSet64 = process.PeakWorkingSet64;
+    Console.WriteLine("List PeakWorkingSet64: " + listPeakWorkingSet64 + " bytes");
+}
+Console.WriteLine("Loaded List players: " + loadedBenchmarkList.Count);
 
 //Task 3
 static void FileWriter<T>(string path, T objectToWrite) where T : class
