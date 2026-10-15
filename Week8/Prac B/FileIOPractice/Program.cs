@@ -30,21 +30,23 @@ foreach (Player player in players)
 {
     Console.WriteLine(player);
 }
-//Convert the list to JSON
-string jsonString = JsonSerializer.Serialize(players);
-Console.WriteLine("\nJSON data");
-Console.WriteLine(jsonString);
 
-//Save the JSON to a file
 string jsonPath = "./Players.json";
-File.WriteAllText(jsonPath, jsonString);
+
+// Write the players to a JSON file.
+FileWriter(jsonPath, players);
 Console.WriteLine("\nJSON file saved successfully.");
 
-//Load the JSON from the file
-jsonString = File.ReadAllText(jsonPath);
+// Read the players from the JSON file.
+List<Player> loadedPlayers = FileReader<List<Player>>(jsonPath);
 
-//Convert the JSON back to a list of players
-List<Player> loadedPlayers = JsonSerializer.Deserialize<List<Player>>(jsonString)!;
+Console.WriteLine("\nLoaded players:");
+
+foreach (Player player in loadedPlayers)
+{
+    Console.WriteLine(player);
+}
+
 
 //Task 3
 static void FileWriter<T>(string path, T objectToWrite) where T : class
