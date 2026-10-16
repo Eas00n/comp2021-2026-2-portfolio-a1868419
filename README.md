@@ -121,16 +121,14 @@ SDP
 
 ### Description
 
-- Used Hashtable to store players and their scores
-- Added and retrieved key-value pairs
-- Tested string keys and duplicate keys
-- Used exception handling for duplicate keys
-- Sorted players by score using LINQ
-- Compared string concatenation using += with StringBuilder.Append()
-- Used Stopwatch to measure execution time
-- Learned about Big-O time complexity
-- Used ScottPlot to create performance graphs
-- Compared the performance of different string-building methods
+- Used Hashtable to store and sort player scores
+- Tested duplicate keys and exception handling
+- Compared string concatenation with StringBuilder
+- Used Stopwatch and ScottPlot to measure and visualise - performance
+- Practised file input/output using C#
+- Serialised and deserialised player data using JSON
+- Created generic file read and write methods
+- Compared List<Player> and LinkedList<Player> memory usage
 
 ---
 
@@ -181,4 +179,4 @@ Learned about trees, heaps, SortedSet, SortedDictionary and PriorityQueue. Pract
 
 ### Week 8
 
-Learned about hash tables and key-value storage. Practised adding, retrieving and sorting data. Tested duplicate keys and exception handling. Compared string concatenation with StringBuilder using Stopwatch. Learned about Big-O complexity and used ScottPlot to create performance graphs.
+Learned about hash tables, algorithm complexity and file input/output. Practised JSON serialisation, deserialisation and generic file methods. Compared string-building performance using Stopwatch and ScottPlot. Also compared the memory usage of List<Player> and LinkedList<Player> using 10,000 players.

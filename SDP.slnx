@@ -64,4 +64,12 @@
   <Folder Name="/Week7/Prac B/">
     <Project Path="Week7/Prac B/SortedDictionaryPractice/SortedDictionaryPractice.csproj" />
   </Folder>
+
+  <Folder Name="/Week8/" />
+  <Folder Name="/Week8/Prac A/">
+    <Project Path="Week8/Prac A/HashTablePractice/HashTablePractice.csproj" />
+  </Folder>
+  <Folder Name="/Week8/Prac B/">
+    <Project Path="Week8/Prac B/FileIOPractice/FileIOPractice.csproj" />
+  </Folder>
 </Solution>
