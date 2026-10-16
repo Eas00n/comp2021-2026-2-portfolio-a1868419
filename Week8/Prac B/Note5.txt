@@ -1,0 +1,3 @@
+1. LinkedList<Player> used more memory in my test. Its HeapSizeBytes was 10,537,872 bytes, while List<Player> used 7,778,928 bytes.
+
+2. LinkedList uses extra nodes to store its elements. Each node stores the player and links to other nodes. List stores its elements in an internal array, so it usually uses less memory when storing many objects.
