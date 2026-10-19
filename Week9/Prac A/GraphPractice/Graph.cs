@@ -41,6 +41,12 @@ public class Graph
         //Store the parent of each discovered node and remember the path to the target node
         Dictionary<Node, Node> Parents = new Dictionary<Node, Node>();
         List<Node> Discovered = new List<Node>();
+        //Add the starting node to the queue.
+        Queued.Enqueue(startNode);
+        Discovered.Add(startNode);
+
+        Node Current = startNode;
+        bool found = false;
     }
 
     public override string ToString()
