@@ -69,6 +69,15 @@ public class Graph
                 Parents.Add(edge, Current);
             }
         }
+        //Print the checked nodes
+        Console.WriteLine("Checked nodes:");
+
+        foreach (Node node in Checked)
+        {
+            Console.Write(node.Data + " ");
+        }
+
+        Console.WriteLine();
     }
 
     public override string ToString()
