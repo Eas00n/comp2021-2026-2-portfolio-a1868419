@@ -57,7 +57,17 @@ public class Graph
                 break;
             }
             Checked.Add(Current);   
-        
+            foreach (Node edge in Current.Edges)
+            {
+                if (Discovered.Contains(edge))
+                {
+                    continue;
+                }
+
+                Queued.Enqueue(edge);
+                Discovered.Add(edge);
+                Parents.Add(edge, Current);
+            }
         }
     }
 
