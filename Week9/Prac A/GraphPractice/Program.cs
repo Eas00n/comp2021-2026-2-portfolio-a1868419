@@ -24,3 +24,5 @@ graph.AddEdge(C, F);
 graph.AddEdge(D, G);
 graph.AddEdge(E, H);
 graph.AddEdge(F, I);
+
+Console.WriteLine(graph);
