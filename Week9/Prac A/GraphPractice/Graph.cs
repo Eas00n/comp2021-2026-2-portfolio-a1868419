@@ -36,6 +36,11 @@ public class Graph
     {
         //Store the nodes that have been checked
         List<Node> Checked = new List<Node>();
+        //Store the nodes waiting to be visited
+        Queue<Node> Queued = new Queue<Node>();
+        //Store the parent of each discovered node and remember the path to the target node
+        Dictionary<Node, Node> Parents = new Dictionary<Node, Node>();
+        List<Node> Discovered = new List<Node>();
     }
 
     public override string ToString()
