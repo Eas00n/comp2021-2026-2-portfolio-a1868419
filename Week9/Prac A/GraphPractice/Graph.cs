@@ -30,4 +30,24 @@ public class Graph
             toNode.Edges.Add(fromNode);
         }
     }
+    public override string ToString()
+    {
+        StringBuilder result = new StringBuilder();
+
+        foreach (Node node in Nodes)
+        {
+            result.Append(node.Data);
+            result.Append(": ");
+
+            foreach (Node edge in node.Edges)
+            {
+                result.Append(edge.Data);
+                result.Append(" ");
+            }
+
+            result.AppendLine();
+        }
+
+        return result.ToString();
+    }
 }
