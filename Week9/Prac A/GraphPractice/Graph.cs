@@ -47,6 +47,18 @@ public class Graph
 
         Node Current = startNode;
         bool found = false;
+        //Continue while there are nodes to visit
+        while (Queued.Count > 0)
+        {
+            Current = Queued.Dequeue();
+            if (Current == targetNode)
+            {
+                found = true;
+                break;
+            }
+            Checked.Add(Current);   
+        
+        }
     }
 
     public override string ToString()
