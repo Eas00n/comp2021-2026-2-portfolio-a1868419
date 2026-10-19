@@ -25,4 +25,15 @@ graph.AddEdge(D, G);
 graph.AddEdge(E, H);
 graph.AddEdge(F, I);
 
-Console.WriteLine(graph);
+//Test BFS on the original graph
+Console.WriteLine("=== Original Graph ===");
+graph.BFS(A, I);
+
+//Add the extra edges
+graph.AddEdge(G, H);
+graph.AddEdge(H, I);
+
+//Test BFS on the adjusted graph
+Console.WriteLine();
+Console.WriteLine("=== Adjusted Graph ===");
+graph.BFS(A, I);
