@@ -57,8 +57,8 @@
   </Folder>
   
   <Folder Name="/Week7/" />
-  <Folder Name="/Week7/Part A/">
-    <Project Path="Week7/Part A/SortedSetPractice/SortedSetPractice.csproj" />
+  <Folder Name="/Week7/Prac A/">
+    <Project Path="Week7/Prac A/SortedSetPractice/SortedSetPractice.csproj" />
   </Folder>
   <Folder Name="/Week7/Prac B/">
     <Project Path="Week7/Prac B/SortedDictionaryPractice/SortedDictionaryPractice.csproj" />
