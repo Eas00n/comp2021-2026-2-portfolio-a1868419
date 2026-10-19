@@ -3,5 +3,5 @@ using System.Text;
 
 public class Graph
 {
-    
+    public List<Node> Nodes { get; set; }
 }
