@@ -1,0 +1,5 @@
+1. In my implementation, DFS may find the target faster because it explores one branch deeply. It follows A, C and F before reaching I. BFS explores nodes layer by layer and may check more nodes before finding I. The result depends on the order of the edges.
+
+2. The result depends on the graph connections and the order in which the neighbours are visited. BFS explores nodes layer by layer, while DFS follows one branch at a time. In my implementation, the algorithm that reaches I first will stop earlier.
+
+3. Both BFS and DFS have a time complexity of O(|V| + |E|) when an adjacency list is used. They visit each vertex and check its edges. They explore the graph in different orders, but the total amount of work is still proportional to the number of vertices and edges.
