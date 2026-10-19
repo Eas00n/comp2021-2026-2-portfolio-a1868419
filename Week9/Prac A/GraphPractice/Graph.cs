@@ -142,6 +142,29 @@ public class Graph
             Console.Write(node.Data + " ");
         }
         Console.WriteLine();
+        //Print the path if the target was found
+        if (found)
+        {
+            List<Node> Path = new List<Node>();
+            Node pathNode = targetNode;
+            Path.Add(pathNode);
+            while (Parents.ContainsKey(pathNode))
+            {
+                pathNode = Parents[pathNode];
+                Path.Add(pathNode);
+            }
+            Path.Reverse();
+            Console.Write("Path to " + targetNode.Data + ": ");
+            foreach (Node node in Path)
+            {
+                Console.Write(node.Data + " ");
+            }
+            Console.WriteLine();
+        }
+        else
+        {
+            Console.WriteLine("Target not found.");
+        }
     }
 
     public override string ToString()
