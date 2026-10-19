@@ -105,7 +105,13 @@ public class Graph
 
     public void DFS(Node startNode, Node targetNode)
     {
-        
+        List<Node> Checked = new List<Node>();
+        Stack<Node> Stacked = new Stack<Node>();
+        Dictionary<Node, Node> Parents = new Dictionary<Node, Node>();
+        List<Node> Discovered = new List<Node>();
+        //Add the starting node to the stack
+        Stacked.Push(startNode);
+        Discovered.Add(startNode);
     }
 
     public override string ToString()
