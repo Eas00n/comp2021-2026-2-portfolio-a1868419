@@ -11,3 +11,16 @@ Node F = new Node("F");
 Node G = new Node("G");
 Node H = new Node("H");
 Node I = new Node("I");
+
+//Add edges between nodes
+graph.AddEdge(A, B);
+graph.AddEdge(A, C);
+
+graph.AddEdge(B, D);
+graph.AddEdge(B, E);
+
+graph.AddEdge(C, F);
+
+graph.AddEdge(D, G);
+graph.AddEdge(E, H);
+graph.AddEdge(F, I);
