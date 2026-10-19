@@ -26,7 +26,7 @@ graph.AddEdge(E, H);
 graph.AddEdge(F, I);
 
 //Test BFS on the original graph
-Console.WriteLine("=== Original Graph ===");
+Console.WriteLine("=== BFS - Original Graph ===");
 graph.BFS(A, I);
 
 //Add the extra edges
@@ -35,5 +35,52 @@ graph.AddEdge(H, I);
 
 //Test BFS on the adjusted graph
 Console.WriteLine();
-Console.WriteLine("=== Adjusted Graph ===");
+Console.WriteLine("=== BFS - Adjusted Graph ===");
 graph.BFS(A, I);
+
+//Test the original graph
+Console.WriteLine("=== Original Graph: BFS ===");
+graph.BFS(A, I);
+
+Console.WriteLine();
+Console.WriteLine("=== Original Graph: DFS ===");
+graph.DFS(A, I);
+
+//Create a separate graph for the adjusted version
+Graph adjustedGraph = new Graph();
+
+Node a = new Node("A");
+Node b = new Node("B");
+Node c = new Node("C");
+Node d = new Node("D");
+Node e = new Node("E");
+Node f = new Node("F");
+Node g = new Node("G");
+Node h = new Node("H");
+Node i = new Node("I");
+
+//Add the original edges
+adjustedGraph.AddEdge(a, b);
+adjustedGraph.AddEdge(a, c);
+adjustedGraph.AddEdge(b, d);
+adjustedGraph.AddEdge(b, e);
+adjustedGraph.AddEdge(c, f);
+adjustedGraph.AddEdge(d, g);
+adjustedGraph.AddEdge(e, h);
+adjustedGraph.AddEdge(f, i);
+
+//Add the extra edges shown in the adjusted diagram
+adjustedGraph.AddEdge(d, e);
+adjustedGraph.AddEdge(e, f);
+adjustedGraph.AddEdge(f, h);
+adjustedGraph.AddEdge(g, h);
+adjustedGraph.AddEdge(h, i);
+
+//Test the adjusted graph
+Console.WriteLine();
+Console.WriteLine("=== Adjusted Graph: BFS ===");
+adjustedGraph.BFS(a, i);
+
+Console.WriteLine();
+Console.WriteLine("=== Adjusted Graph: DFS ===");
+adjustedGraph.DFS(a, i);
