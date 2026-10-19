@@ -30,6 +30,13 @@ public class Graph
             toNode.Edges.Add(fromNode);
         }
     }
+
+//Task2
+    public void BFS(Node startNode, Node targetNode)
+    {
+        
+    }
+
     public override string ToString()
     {
         StringBuilder result = new StringBuilder();
