@@ -1,0 +1,5 @@
+1. We need to keep track of visited nodes to avoid visiting the same node many times. This is important because graphs can have cycles or connections in both directions. It also helps the algorithm avoid unnecessary work.
+
+2. My BFS algorithm finds the path A → C → F → I. BFS explores nodes layer by layer. The result also depends on the order of the edges in the node lists. It finds this path before checking other possible paths to I.
+
+3. The time complexity of BFS is O(|V| + |E|) when an adjacency list is used. |V| means the number of vertices or nodes. |E| means the number of edges. BFS visits each node and checks each edge a limited number of times.
