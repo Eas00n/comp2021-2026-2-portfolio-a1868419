@@ -112,6 +112,29 @@ public class Graph
         //Add the starting node to the stack
         Stacked.Push(startNode);
         Discovered.Add(startNode);
+        bool found = false;
+        //Continue while there are nodes to visit
+        while (Stacked.Count > 0)
+        {
+            Node Current = Stacked.Pop();
+            if (Current == targetNode)
+            {
+                found = true;
+                break;
+            }
+            Checked.Add(Current);
+            foreach (Node edge in Current.Edges)
+            {
+                if (Discovered.Contains(edge))
+                {
+                    continue;
+                }
+
+                Stacked.Push(edge);
+                Discovered.Add(edge);
+                Parents.Add(edge, Current);
+            }
+        }
     }
 
     public override string ToString()
