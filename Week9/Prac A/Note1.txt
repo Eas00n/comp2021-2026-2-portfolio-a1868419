@@ -1,0 +1,3 @@
+1. We created an undirected, acyclic and unweighted graph. It is undirected because each edge connects two nodes in both directions. It is acyclic because there is no cycle in the graph. It is unweighted because the edges do not have any weights or costs.
+
+2. Two examples are a file system and a social network. A file system can be represented as a graph of folders and files. A social network can be represented as a graph of users and their connections.
