@@ -34,7 +34,8 @@ public class Graph
 //Task2
     public void BFS(Node startNode, Node targetNode)
     {
-        
+        //Store the nodes that have been checked
+        List<Node> Checked = new List<Node>();
     }
 
     public override string ToString()
