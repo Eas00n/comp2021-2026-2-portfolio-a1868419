@@ -103,6 +103,11 @@ public class Graph
         }
     }
 
+    public void DFS(Node startNode, Node targetNode)
+    {
+        
+    }
+
     public override string ToString()
     {
         StringBuilder result = new StringBuilder();
