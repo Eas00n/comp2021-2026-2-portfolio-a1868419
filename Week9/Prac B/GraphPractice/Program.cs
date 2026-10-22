@@ -21,12 +21,12 @@ Node M = new Node("M");
 Node N = new Node("N");
 Node End = new Node("End");
 //Add edges
-graph.AddNode(Start, A, 1);
-graph.AddNode(Start, B, 5);
-graph.AddNode(Start, D, 5);
-graph.AddNode(A, C, 1);
-graph.AddNode(B, E, 5);
-graph.AddNode(D, C, 5);
+graph.AddEdge(Start, A, 1);
+graph.AddEdge(Start, B, 5);
+graph.AddEdge(Start, D, 5);
+graph.AddEdge(A, C, 1);
+graph.AddEdge(B, E, 5);
+graph.AddEdge(D, C, 5);
 graph.AddEdge(D, E, 5);
 graph.AddEdge(D, G, 5);
 
@@ -66,7 +66,7 @@ DistancesList[Start] = 0;
 //Create the priority queue
 PriorityQueue<Node, int> PriorityQueue = new PriorityQueue<Node, int>();
 //Store the parents of each node
-Dictionary<Node, Node> Parents = new Dictionary<Node, Node>();
+Dictionary<Node, Node?> Parents = new Dictionary<Node, Node?>();
 //Start has no parent
 Parents[Start] = null;
 //Add Start to the priority queue
@@ -82,14 +82,14 @@ while (PriorityQueue.Count > 0)
         break;
     }
     //Check all nodes
-    foreach (KeyKeyValuePair<Node, int> neighbour in Current.Edges)
+    foreach (KeyValuePair<Node, int> neighbour in Current.Edges)
     {
         Node nextNode = neighbour.Key;
         int weight = neighbour.Value;
         //Calculate the new distance
         int newDistance = DistancesList[Current] + weight;
         //Check if the new distance is shorter
-        if (newDistance >= DistanceList[nextNode])
+        if (newDistance >= DistancesList[nextNode])
         {
             continue;
         }

@@ -8,7 +8,7 @@ public class Graph
     {
         Nodes = new List<Node>();
     }
-    public void AddNode(Node fromNode, Node toNode, int weight)
+    public void AddEdge(Node fromNode, Node toNode, int weight)
     {
         if (!Nodes.Contains(fromNode))
         {
