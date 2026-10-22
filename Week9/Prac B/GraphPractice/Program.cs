@@ -101,3 +101,30 @@ while (PriorityQueue.Count > 0)
         PriorityQueue.Enqueue(nextNode, newDistance);
     }
 }
+
+//Create final path
+List<string> Path = new List<string>();
+Node CurrentNode = Target;
+while (CurrentNode != null)
+{
+    Path.Add(CurrentNode.Data);
+    if(CurrentNode == Start)
+    {
+        break;
+    }
+    CurrentNode = Parents[CurrentNode];
+}
+//Reverse the path
+Path.Reverse();
+//Print the path
+Console.WriteLine("Shortest path from Start to Target:");
+foreach (string node in Path)
+{
+    Console.Write(node);
+    if (node != Path[Path.Count - 1])
+    {
+        Console.Write(" -> ");
+    }
+}
+Console.WriteLine();
+Console.WriteLine("Total distance: " + DistancesList[Target]);
