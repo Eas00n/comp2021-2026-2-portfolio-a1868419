@@ -27,4 +27,22 @@ public class Graph
             toNode.Edges.Add(fromNode, weight);
         }
     }
+    public override string ToString()
+    {
+        StringBuilder result = new StringBuilder();
+        foreach (Node node in Nodes)
+        {
+            result.Append(node.Data);
+            result.Append(": ");
+            foreach (KeyValuePair<Node, int> edge in node.Edges)
+            {
+                result.Append(edge.Key.Data);
+                result.Append(" (");
+                result.Append(edge.Value);
+                result.Append("), ");
+            }
+            result.AppendLine();
+        }
+        return result.ToString();
+    }
 }
