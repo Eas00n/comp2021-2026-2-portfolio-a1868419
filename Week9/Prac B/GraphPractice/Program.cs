@@ -71,3 +71,33 @@ Dictionary<Node, Node> Parents = new Dictionary<Node, Node>();
 Parents[Start] = null;
 //Add Start to the priority queue
 PriorityQueue.Enqueue(Start, 0);
+
+//Run Dijkstra's algorithm
+while (PriorityQueue.Count > 0)
+{
+    Node Current = PriorityQueue.Dequeue();
+    //Stop if it reach the target
+    if (Current == Target)
+    {
+        break;
+    }
+    //Check all nodes
+    foreach (KeyKeyValuePair<Node, int> neighbour in Current.Edges)
+    {
+        Node nextNode = neighbour.Key;
+        int weight = neighbour.Value;
+        //Calculate the new distance
+        int newDistance = DistancesList[Current] + weight;
+        //Check if the new distance is shorter
+        if (newDistance >= DistanceList[nextNode])
+        {
+            continue;
+        }
+        //Update the distance
+        DistancesList[nextNode] = newDistance;
+        //Update the parent
+        Parents[nextNode] = Current;
+        //Add the next node to the priority queue
+        PriorityQueue.Enqueue(nextNode, newDistance);
+    }
+}
