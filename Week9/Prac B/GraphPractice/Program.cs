@@ -65,3 +65,9 @@ foreach (Node node in graph.Nodes)
 DistancesList[Start] = 0;
 //Create the priority queue
 PriorityQueue<Node, int> PriorityQueue = new PriorityQueue<Node, int>();
+//Store the parents of each node
+Dictionary<Node, Node> Parents = new Dictionary<Node, Node>();
+//Start has no parent
+Parents[Start] = null;
+//Add Start to the priority queue
+PriorityQueue.Enqueue(Start, 0);
