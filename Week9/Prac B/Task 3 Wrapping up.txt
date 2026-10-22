@@ -1,0 +1,13 @@
+1. My favourite feature is that C# code is clear and direct. I think it is more organised than Python, and I like how classes and methods separate different parts of the code. It makes the program easier to understand when I know how each part works.
+
+2. My most hated part is the errors and warnings, especially when I forget a variable name or use the wrong type. Sometimes, a small mistake can stop the whole program from running. For example, I had problems with variable names, nullable warnings and project files during the pracs. These problems took time to fix.
+
+3. I think the early programming tasks, such as working with variables, conditions and simple classes, were the easiest after I understood the examples. They were easier because the code was small and the results were easy to check.
+
+4. I enjoyed the graph and pathfinding prac in Week 9. It was interesting to build a graph with nodes and edges, then use BFS, DFS and Dijkstra's algorithm to find a path. I could see how the algorithms worked from the output, and I liked comparing different ways to find a path.
+
+5. I will revise the basic theory from Weeks 1 to 9. I still need to make my understanding stronger, especially for data structures, algorithm complexity and how different algorithms work. I want to understand the basic ideas well before the exam.
+
+6. Make sure you understand the Python code before starting this course. This is very important if you are new to programming. Learning Python first will make it easier to understand C# concepts. I was also very confused in the first week because I was still trying to understand the programming basics. Do not just copy the code. Try to understand what each line does and practise it yourself.
+
+7. I really like the coding music in this course because it helps me relax and focus on coding. My favourite was the music in Topic 6 Prac B from Half-Life 2: Lambda Core. The link does not work anymore, so I think it would be nice to add more music from the Half-Life series. I recommend Path of Borealis from Half-Life 2. I think it would create a good atmosphere for coding and make the pracs more enjoyable.

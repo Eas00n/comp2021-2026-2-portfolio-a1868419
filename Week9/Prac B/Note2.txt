@@ -1,0 +1,11 @@
+1. I used ChatGPT to generate the Dijkstra's algorithm code.
+
+2. I asked ChatGPT to create a complete C# implementation of Dijkstra's algorithm. I asked it to use the weighted Horse graph and find the shortest path from Start to End. I also asked it to include all the code needed to run the program.
+
+3. ChatGPT generated the full implementation in one round. I still needed to run the code with dotnet run to check whether it worked correctly. If errors appear, I will need to revise the code and test it again.
+
+4. My code uses separate steps to create the distance list, priority queue and parent dictionary. The AI code puts the shortest path search inside a method called FindShortestPath. This makes the main program shorter and easier to read.
+
+5. The AI code checks whether an edge has a negative weight. It also checks whether an old priority queue entry has an outdated distance. These checks make the implementation more reliable.
+
+6. The AI code uses more advanced C# features, such as var, tuples and expression-bodied methods. These features make the code shorter, but they can be harder for beginners to understand. My code is more straightforward for me to follow.
