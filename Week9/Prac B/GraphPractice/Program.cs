@@ -51,3 +51,17 @@ graph.AddEdge(M, L, 1);
 graph.AddEdge(M, N, 1);
 
 graph.AddEdge(L, End, 1);
+
+//Set the Target
+Node Target = End;
+//Store the shortest path
+Dictionary<Node, int> DistancesList = new Dictionary<Node, int>();
+//Set all distances to infinity
+foreach (Node node in graph.Nodes)
+{
+    DistancesList.Add(node, int.MaxValue);
+}
+//Start has a distance of 0
+DistancesList[Start] = 0;
+//Create the priority queue
+PriorityQueue<Node, int> PriorityQueue = new PriorityQueue<Node, int>();
