@@ -1,0 +1,3 @@
+1. My top three topics are OOP, data structures and algorithms, and file I/O with JSON and generics. I want to revise OOP because I had some problems with classes, properties and constructors earlier in the semester. I also want to revise data structures and algorithms because there are many different structures and algorithms, such as Lists, Dictionaries, BFS, DFS and Dijkstra. Finally, I will revise file I/O, JSON and generics because I want to make sure I understand how they work.
+
+2. I feel more confident with the basic programming topics from Week 1. I have practised variables, conditions, loops and basic C# syntax many times during the semester, so I don't think I need to spend much time revising them.

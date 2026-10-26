@@ -1,0 +1,17 @@
+1. I will save my current code first so I do not lose my work.
+
+2. I will check the error message and see if the problem is related to AssemblyInfo.cs or another generated file.
+
+3. I will try a few quick checks, such as closing and reopening VS Code and running dotnet clean and dotnet build.
+
+4. If the problem still happens in every project, I will not spend a long time trying to fix VS Code.
+
+5. I will create a new simple project and test if a basic C# program can compile. This can help me check if the problem is with my project or the .NET environment.
+
+6. If the new project works, I will continue the exam in the new project and copy my code over if needed.
+
+7. If the new project also does not compile, I will assume the problem is with the environment and move to questions that do not require running code. I can write the code and explanations first.
+
+8. If Git is causing the problem, I will not spend too much time fixing Git during the exam. I will keep my code locally and continue answering the questions.
+
+9. After I have completed as many questions as possible, I will return to the technical problem if I still have time.

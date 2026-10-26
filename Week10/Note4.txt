@@ -1,0 +1,28 @@
+This question is much harder than the topics I am most confident with, so I would not spend too much time trying to finish the whole question.
+First, I would read the question and identify the main idea. I know that a topological ordering is related to a directed graph and prerequisites. I would also look for cycles because a cycle means there is no valid ordering.
+I would spend about 5 minutes on this question. I would first write some pseudocode to show my understanding of the problem. For example, I would check the graph, find courses with no prerequisites, add them to the result, and continue until all courses are processed. If some courses cannot be processed, there may be a cycle.
+I would then write some simple C# skeleton code, such as a method and the main variables needed for the graph and result. I would add a few simple comments to explain what each part should do.
+I would not spend a long time trying to remember advanced C# syntax. If I cannot make the full code work after a few minutes, I will move to the next question. I can then come back to this question later if I have extra time.
+
+Attempt
+public static List<string> GetCourseOrder(Dictionary<string, List<string>> graph)
+{
+    List<string> result = new List<string>();
+
+    // Find courses with no prerequisites.
+
+    // Add available courses to the result.
+
+    // Continue removing courses and updating prerequisites.
+
+    // If some courses cannot be processed, a cycle exists.
+
+    return result;
+}
+
+The main algorithm I would try to use is topological sorting. I would use the idea of finding courses with no remaining prerequisites. If all courses can be added to the result, the ordering is valid. If some courses remain, there is a cycle.
+
+Reflection
+1. My plan worked because I did not spend too much time on a question that I could not fully solve. I could still show that I understood the main idea of the problem and write some valid C# code. This could give me some marks instead of getting zero.
+
+2. Next time, I would try to remember more common graph algorithms because this type of question can be difficult without knowing the basic algorithm. I would also make sure I move on quickly if I am stuck, because spending too much time on one difficult question can cause me to lose marks on easier questions.
