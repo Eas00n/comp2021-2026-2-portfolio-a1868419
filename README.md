@@ -207,5 +207,10 @@ Practised different C# collections, including dictionaries, stacks and queues. I
 Learned about trees, heaps, SortedSet, SortedDictionary and PriorityQueue. Practised custom comparers, sorted collections and priority scheduling. Also created a data visualisation using ScottPlot.
 
 ### Week 8
-
 Learned about hash tables, algorithm complexity and file input/output. Practised JSON serialisation, deserialisation and generic file methods. Compared string-building performance using Stopwatch and ScottPlot. Also compared the memory usage of List<Player> and LinkedList<Player> using 10,000 players.
+
+### Week 9
+Learned about graphs and graph traversal algorithms. Implemented BFS and DFS to visit nodes in a graph. Worked with weighted graphs and used Dijkstra's algorithm to find the shortest path. Practised using Dictionary and PriorityQueue to manage graph data and distances.
+
+### Week 10
+Reviewed important programming topics and prepared for coding exams. Practised solving problems using Dictionary and graph algorithms. Developed strategies for managing exam time and handling technical problems with VS Code and Git. Reflected on revision priorities and ways to improve exam performance.
