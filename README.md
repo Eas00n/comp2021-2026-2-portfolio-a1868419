@@ -20,6 +20,8 @@ SDP
 ├── Week6
 ├── Week7
 ├── Week8
+├── Week9
+├── Week10
 └── README.md
 ```
 
@@ -129,6 +131,33 @@ SDP
 - Serialised and deserialised player data using JSON
 - Created generic file read and write methods
 - Compared List<Player> and LinkedList<Player> memory usage
+
+---
+## Topic 9 – Graphs and Graph Algorithms
+
+### Description
+
+- Created graph structures using nodes and edges
+- Implemented Breadth-First Search (BFS)
+- Implemented Depth-First Search (DFS)
+- Worked with weighted graphs
+- Used Dictionary to store neighbouring nodes and edge weights
+- Implemented Dijkstra's algorithm to find the shortest path
+- Used PriorityQueue to process nodes by distance
+- Compared graph traversal and shortest path algorithms
+
+---
+## Topic 10 – Revision and Exam Preparation
+
+### Description
+
+- Reviewed important C# topics from previous weeks
+- Identified topics that need more revision
+- Planned time management strategies for coding exams
+- Practised solving Dictionary and counting problems
+- Practised writing code under time limits
+- Prepared a recovery plan for technical problems during exams
+- Reflected on problem-solving strategies and areas for improvement
 
 ---
 

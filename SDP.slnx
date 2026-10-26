@@ -71,4 +71,12 @@
   <Folder Name="/Week8/Prac B/">
     <Project Path="Week8/Prac B/FileIOPractice/FileIOPractice.csproj" />
   </Folder>
+
+  <Folder Name="/Week9/" />
+  <Folder Name="/Week9/Prac A/">
+    <Project Path="Week9/Prac A/GraphPractice/GraphPractice.csproj" />
+  </Folder>
+  <Folder Name="/Week9/Prac B/">
+    <Project Path="Week9/Prac B/GraphPractice/GraphPractice.csproj" />
+  </Folder>
 </Solution>
